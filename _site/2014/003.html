@@ -1,199 +1,172 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="utf-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noarchive">
+<meta name="description" content="The Volume 1 published for JACR Journal.">
+<meta name="keywords" content="avestia, publishing, journals, papers, science, renewable energy">
 <title>JACR - A Jitter Compensating PID Controller to Mitigate the Detrimental Effects of Software Induced Jitter in Digital Control Systems</title>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
 
-<link href='http://fonts.googleapis.com/css?family=Antic+Slab:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
+<meta name="handheldfriendly" content="true">
+<meta name="mobileoptimized" content="240">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../css/style.css" />
+<link href="../css/avestia.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon">
+<!--[if IE-9]><html lang="en" class="ie9"><![endif]-->
 
-<link href="../css/bootstrap.css" rel="stylesheet">
-<link href="../images/icon.ico" rel="shortcut icon" type="image/x-icon">
-<!--Goole Analytics Most Visited Article Code-->
+<script src="../js/modernizr.custom.63321.js"></script>
+<script type="text/javascript" src="../mostvisited.js"></script> 
+<script type="text/javascript" src="../mostvisitedExt.js"></script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-47353717-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', 'UA-68628727-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
-
-
-<!-- Include Most Visited Articles JS Code -->
- <script type="text/javascript" src="mostvisited.js"></script> 
-
-<!-- Include SHARE THIS js sources -->
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "8f49e037-5155-4595-abc0-d069deae6488", doNotHash: true, doNotCopy: false, hashAddressBar: false, onhover:false});</script>
+<script>
+  (function() {
+    var cx = '016656741306535874023:f_iiykae6ri';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 </head>
+<body class="loading">
+<nav id="slide-menu">
+  <h1>Avestia Publishing</h1>
+  <ul>
+    <li><a href="about">About Us</a></li>
+    <li><a href="ethics">Ethics in Publishing</a></li>
+    <li><a href="openaccess">Open Access</a></li>
+    <li><a href="editor">Become a Reviewer or an Editor</a></li>
+    <li><a href="publishing">Your Publishing Needs</a></li>
+    <li><a href="proceedings">Conference Proceedings</a></li>
+    <li><a href="news">Latest News</a></li>
+    <li><a href="guidelines">Author Guidelines</a></li>
+    <li><a href="journals">Journals</a></li>
+    <li><a href="http://amss.avestia.com/">Submission</a></li>
+    <li><a href="copyright">Copyright</a></li>
+    <li><a href="contact">Contact Us</a></li>
+  </ul>
+</nav>
 
-<body>
+<div id="content">
+  <div class="desktop">
+      <div class="cbp-af-header">
+  <div class="cbp-af-inner">
+    <a href="/"><img src="../img/logo.svg" class="flex-logo" alt="Avestia Publishing"></a>
 
-<div id="wrapper">
-
-  <div class="header">
-
-    <div class="container">
-
-      <div class="row">
-
-        <header id="header">
-          <div class="logo col-sm-4"><a href="http://avestia.com"><img src="/images/logo.png" alt="Journal" class="img" /></a></div>
-          <div class="threemenu col-sm-5">
-            <div class="row"><a class="link col-sm-4" href="http://avestia.com"><img src="/images/home.jpg" class="img"></a> <a class="link col-sm-4" href="http://avestia.com/journals/"><img src="/images/journals.jpg" class="img"></a> <a class="link col-sm-4" href="http://amss.avestia.com"><img src="/images/submit.jpg" class="img"></a></div>
-          </div>
-          <div class="searching col-sm-3">
-<div class="sharethis">Share this page:<br/>
-<span class='st_email'></span>
-<span class='st_facebook'></span>
-<span class='st_twitter'></span>
-<span class='st_googleplus'></span>
-<span class='st_linkedin'></span>
-</div>
-            
-         <div class="search_wrapper">
-         <form class="search" action="../results" method="get">
-              <fieldset>
-                <span class="text">
-                <input name="q" id="q" type="text" value="" placeholder="Search..." /><button class="search_top_button">GO</button>
-                </span>
-
-              </fieldset>
-            </form>
-            
-            </div>
-          </div>
-          <div class="col-lg-12">
-
-          <div class="avada-row">
-
-            <nav id="nav" class="nav-holder">
-
-              <div role="navigation" class="navbar navbar-default">
-
-                <div class="container-fluid">
-
-                  <div class="navbar-header">
-                  
-                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-<span class="navbar-brand" href="#">Menu</span>
-                  </div>
-
-                  <div class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav">
-
-					<li><a href="/">Journal Home</a></li><span class="menu-line">|</span>
-                        <li><a href="../aims/">Aims and Scopes</a></li><span class="menu-line">|</span>
-                        <li><a href="../charges/">Article Processing Charges</a></li><span class="menu-line">|</span>
-                        <li><a href="../guidelines/">Author Guidelines</a></li><span class="menu-line">|</span>
-                        <li><a href="../board/">Editorial Board</a></li><br>
-                        <li><a href="../volumes/">Past Volumes</a></li><span class="menu-line">|</span>
-                        <li><a href="../current/">Current Volume</a></li><span class="menu-line">|</span>
-                        <li><a href="../propose/">Propose a Special Topic</a></li><span class="menu-line">|</span>
-                        <li><a href="../register/">Receive Updates</a></li><span class="menu-line">|</span>
-                        <li><a href="../contact/">Contact Us</a></li>
-
-
-
-                    </ul>
-
-                  </div>
-
-                  <!--/.nav-collapse -->
-
-                </div>
-
-                <!--/.container-fluid -->
-
-              </div>
-
-            </nav>
-
-            </div>
-
-          </div>
-          <div class="clearfix"></div>
-
-        </header>
-
-      </div>
-
+    <div class="nav1">
+      <nav>
+        <a href="/">Home</a>
+        <a href="http://amss.avestia.com/">Submission</a>
+        <a href="journals">Journals</a>
+        <a href="ethics">Ethics in Publishing</a>
+        <a href="guidelines">Author Guidelines</a>
+      </nav>
     </div>
-<div class="clearfix"></div>
+
+    <div class="search-menu">
+      <div class="menu-trigger-1"><p class="menu">MENU</p></div><br>
+      <gcse:searchbox-only resultsUrl="results"></gcse:searchbox-only>
+    </div>
+
+    <div class="nav2">
+      <nav>
+        <a href="/">Home</a>
+        <a href="http://amss.avestia.com/">Submission</a>
+        <a href="journals">Journals</a>
+        <a href="ethics">Ethics in Publishing</a>
+        <a href="guidelines">Author Guidelines</a>
+      </nav>
+    </div>
   </div>
-
-  <div class="slider">
-
-  <div class="container">
-
-  <div class="row"><div class="col-lg-12"><img class="img2" src="../images/header.png" alt="img"></div></div>
-
-  </div>
-
-  </div>
-
-<div class="container">
-  <div class="clearfix"></div>
-  <div class="row">
-
-  <div class="col-lg-12 text">
-  
-<div align=center>
-<div class="table">
-
-    <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='border:none; width: 100%'>
-         <tr>
-                <td>Volume 1, Year 2014 - Pages 22-30</td>
-                <td align="right"><a href="PDF/003.pdf">View PDF (Full-text)</a></td>
-        </tr>
-         <tr>
-                <td>DOI: 10.11159/jacr.2014.003</td>
-                <td align="right"><a href="#references">Linked References</a></td>
-        </tr>
-		<tr>
-		<td colspan="2">ISSN: 2368-6677</td>
-		</tr>
-     </table>
-     
 </div>
+  </div>
+
+  <header>
+    <div class="mobile">
+      <div class="cbp-af-header">
+  <div class="cbp-af-inner">
+    <div class="unit unit-s-3-4 unit-m-1-3 unit-l-1-3">
+          <a href="/"><img src="../img/logo.svg" class="flex-logo" alt="Avestia Publishing"></a>
+      </div>
+      <div class="unit unit-s-1-3 unit-m-2-3 unit-m-2-3-1 unit-l-2-3">
+          <div class="menu-trigger"></div>
+      </div>
+  </div>
+</div>
+      <div class="bg">
+        <gcse:searchbox-only resultsUrl="results"></gcse:searchbox-only>
+      </div>
+    </div> <!--Mobile -->
+  </header>
+
+  <div class="j-header-article">
+  <div class="name">
+    <h1>Journal of Automation and Control Research (JACR)<br>
+    <p class="body">ISSN: 2368-6677</p></h1>
+    <div class="oalink">
+    <a href="/openaccess" target="blank" title="Avestia's Open Access">
+          <img src="../img/j-oa.png" border="0" onmouseover="this.src='../img/j-oa-hover.png'" onmouseout="this.src='../img/j-oa.png'" class="j-oa">
+    </a>
+  </div>
+  </div>
 </div>
 
-<br>
+  <div role="navigation" class="navbar navbar-default">
+  <ul>
+    <li><a href="">Journal Home</a></li>
+    <li><a href="aims">Aims & Scopes</a></li>
+    <li><a href="fee">Publishing Fee</a></li>
+    <li><a href="board">Editorial Board</a></li>
+    <li><button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">Volumes</button></li>
+    <li><a href="contact">Contact Us</a></li>
+  </ul>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="volume1/issue1">Volume 1, Issue 1</a></li>
+      <li><a href="volume2">Volume 2</a></li>
+      <li><a href="current">Current Volume</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
 
-<p align="center" style="font-size:22pt;">A Jitter Compensating PID Controller to Mitigate the Detrimental Effects of Software Induced Jitter in Digital Control Systems</p>
+<div class="grid">
+<div class="unit unit-s-1 unit-m-1 unit-l-1">
+  <div class="main-content j-home">
+    <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-1-2">
+      <p class="body">Volume 1, Year 2014 - Pages 22-30<br>
+      DOI: 10.11159/jacr.2014.003</p>
+    </div>
 
-<p align="center">
+    <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-1-2 a-link">
+        <a href="PDF/003.pdf" class="body-link" class="body-link">View PDF (Full-text)</a><br>
+      <a href="#references" class="body-link">Linked References</a>
+    </div>
 
-    <strong>Chamira Perera<sup>1</sup>, Trevor Pearce<sup>1</sup>, Miodrag Bolic<sup>2</sup></strong>
-    
-        <br><sup>1</sup>Carleton University, Department of Systems and Computer Engineering, 1125 Colonel By Drive, Ottawa, Ontario, Canada K1S 5B6
-	    <br>kaluarachchigeperera@cmail.carleton.ca; pearce@sce.carleton.ca
-	    <br><sup>2</sup>University of Ottawa, School of Electrical Engineering and Computer Science, 161 Louis Pasteur, Ottawa, Ontario, Canada K1N 6N5
-		<br>mbolic@eecs.uottawa.ca
-        
-</p>
-    
+    <h3 class="center">A Jitter Compensating PID Controller to Mitigate the Detrimental Effects of Software Induced Jitter in Digital Control Systems</h3>
 
-<p align="justify"><i><strong>Abstract- </strong>
-Software
+    <p class="body-bold center">Chamira Perera<sup>1</sup>, Trevor Pearce<sup>1</sup>, Miodrag Bolic<sup>2</sup></p>
+
+    <p class="body center"><sup>1</sup>Carleton University, Department of Systems and Computer Engineering, 1125 Colonel By Drive, Ottawa, Ontario, Canada K1S 5B6
+      <br>kaluarachchigeperera@cmail.carleton.ca; pearce@sce.carleton.ca
+      <br><sup>2</sup>University of Ottawa, School of Electrical Engineering and Computer Science, 161 Louis Pasteur, Ottawa, Ontario, Canada K1N 6N5
+    <br>mbolic@eecs.uottawa.ca</p>
+
+    <p class="body"><b>Abstract</b> - <i>Software
 induced delays in a digital control system can lead to degradation in
 performance and as a result plant response characterizing performance
 requirements such as percent overshoot, rise time, and settling time can be
@@ -220,29 +193,26 @@ An evaluation of the performance using a step input experiment validate that
 the proposed solution is capable of satisfying plant response characterizing
 performance requirements whereas the uncompensated counterpart failed to
 satisfy one requirement. A square wave tracking experiment also demonstrated
-that the proposed solution improved performance. </i></p>
+that the proposed solution improved performance.</i></p>
 
-<p align="left"><i><strong>Keywords:</strong></i> Jitter
+    <p class="body"><b><i>Keywords:</i></b> Jitter
 Compensation, Real-Time Digital Control Systems, Software Execution Delay
 Induced Performance Degradation, PID Controllers.</p>
 
-<p>&nbsp;</p>
-<p align="justify">  &copy; Copyright 2014 Authors - This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
+    <p class="body">© Copyright 2015 Authors This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" class="body-link" target="_blank" class="body-link">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
 
-<p>&nbsp;</p>
-
-<p>
-    Date Received: 2014-05-23 <br />
+    <p class="body">Date Received: 2014-05-23 <br />
     
     Date Accepted: 2014-09-04  <br />
     
-    Date Published: 2014-10-20
-</p>
+    Date Published: 2014-10-20</p>
 
-<img src="../images/line.png" width="100%;" height="1" />
-<h2>1. Introduction</h2>
+  <div class="border"></div>
 
-<p align="justify" style="text-indent:19.85pt;">Software
+  <div class="indent">
+<h4>1. Introduction</h4>
+
+<p class="body">Software
 that implements the functionality of a digital control system usually executes
 in a periodic manner. The three main operations of any task that implements the
 functionality of a digital control system (referred to as a <i>control task </i>in
@@ -253,7 +223,7 @@ and digital to analog converter (DAC) respectively. Software is typically
 involved in calculating the control law. However, either software or hardware
 can be used to trigger the ADC and/or DAC. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Execution of
+<p class="body">Execution of
 the analog to digital (A/D) conversion via the ADC, digital to analog (D/A)
 conversion via the DAC, control law, and other software routines such as
 interrupt service routines (ISRs), and real-time operating system (RTOS)
@@ -265,7 +235,7 @@ in this paper vary from one period to the other, and it also considers the
 hardware induced delays from the ADC and DAC. This paper considers three types
 of jitters viz. sampling, input-output, and output jitter. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The negative
+<p class="body">The negative
 effect of software induced delays (both constant and jitter) is a performance
 degradation, which in the worst case can lead to a violation of performance
 requirements. Ultimately, it could result in destabilizing the digital control
@@ -275,7 +245,7 @@ calculation, and outputting to the plant all occur simultaneously without any
 delay. This oversight is one of the contributors to the performance degradation
 issue. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Literature
+<p class="body">Literature
 in the &#64257;eld of improving digital control system performance due to
 software induced delays have several shortcomings. Firstly, not prioritizing
 satisfying plant response characterizing performance requirements, which are:
@@ -285,7 +255,7 @@ compensate for input-output and output jitter using PID controllers to the best
 of our knowledge was not found despite its simplicity. A review of the current
 state of the art is presented in Section 2. </p>
 
-<p align="justify" style="text-indent:19.85pt;">This paper
+<p class="body">This paper
 considers a collection of multiple independent single input single output
 (SISO) digital control systems executing in parallel on a single processor and
 this collection is referred to as a <i>digital control system set</i>. The task
@@ -294,7 +264,7 @@ implementations of digital control sys-tems, which re&#64257;ne the digital
 control system model within a set are discussed in Section 3. Each
 implementation is referred to as a <i>con&#64257;guration </i>in this paper. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The solution
+<p class="body">The solution
 that this paper proposes is a discrete-time PID controller capable of
 compensating for software in-duced jitter. The solution involves modelling the
 worst case delay between input sampling and outputting to the plant, and
@@ -305,7 +275,7 @@ as the <i>one sampling period delay assumption</i>. The discrete-time PID
 controller is tuned to satisfy performance requirements. A discussion of the
 proposed solution is provided in Section 4. </p>
 
-<p align="justify" style="text-indent:19.85pt;">An
+<p class="body">An
 evaluation of the proposed solution which involves controlling the voltage
 stabilizer example plant model described by Lozoya et al. [7] and Marti et al.
 [9] is presented in Section 5, while the performance results from the
@@ -317,18 +287,18 @@ jitter when its uncompensated counterpart failed to ful&#64257;ll at least one
 requirement. Finally, Section 7 provides concluding remarks. </p>
 
 
-<h2>2. Related Work </h2>
+<h4>2. Related Work </h4>
 
-<p align="justify" style="text-indent:19.85pt;">The
+<p class="body">The
 literature for improving digital control system performance in the presence of
 software induced delays can be classi&#64257;ed into three perspectives and
 they are described in the following subsections. </p>
 
 
 
-<h4>2.1. Control Systems Perspective </h4>
+<p class="subhead">2.1. Control Systems Perspective </p>
 
-<p align="justify" style="text-indent:19.85pt;">Compensating
+<p class="body">Compensating
 for software induced delays in the digital controller is the hallmark feature
 of solutions from the control systems perspective. Astrom and Wittenmark [3]
 describe a method to model a constant delay between the input and response from
@@ -336,7 +306,7 @@ the plant. A tutorial by Mathworks [11] discusses how to compensate only for a
 constant delay using a PID controller, which leverages the method described by Astrom
 and Wittenmark [3]. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The research
+<p class="body">The research
 by Marti et al. [8], to the best of our knowledge is the only solution that compensates
 for sampling jitter using a PID controller. Additionally, this solution is also
 intended for state feedback controllers. Smeds and Lu [13] propose to cascade
@@ -349,9 +319,9 @@ the control law which is applied at the start of the next sampling period. </p>
 
 
 
-<h4>2.2. Real-Time Systems Perspective </h4>
+<p class="subhead">2.2. Real-Time Systems Perspective </p>
 
-<p align="justify" style="text-indent:19.85pt;">Solutions
+<p class="body">Solutions
 from the real-time systems perspective improve control system performance
 indirectly by reducing software induced delays and jitter. Adjusting the
 relative deadline is one method to reduce jitter, because this reduces the
@@ -360,7 +330,7 @@ proposed an approach to adjust the relative deadline where the relative
 deadline is initially adjusted of&#64258;ine and subsequently re-adjusted
 online as the workload changes. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Changes can
+<p class="body">Changes can
 also be made to the scheduling policy to minimize jitter. The solution described
 by Nasri and Kargahi [12] modifies the task schedule generated by the earliest
 deadline &#64257;rst (EDF) scheduling policy. Liu et al. [6] proposed a
@@ -369,10 +339,10 @@ to reduce software induced jitter. </p>
 
 
 
-<h4>2.3. Control Scheduling Co-Design
-Perspective </h4>
+<p class="subhead">2.3. Control Scheduling Co-Design
+Perspective </p>
 
-<p align="justify" style="text-indent:19.85pt;">The control
+<p class="body">The control
 scheduling co-design type solutions aim to apply real-time systems and control
 systems approaches in a collaborative manner to design multiple digital
 controllers executing as real-time tasks. In addition, solutions from this
@@ -381,9 +351,9 @@ applying optimization based approaches in an iterative manner. Solutions by Wu
 et al. [14] and Aminifar et al. [1] are examples of solutions from this
 perspective. </p>
 
-<h2>3. System Modelling </h2>
+<h4>3. System Modelling </h4>
 
-<p align="justify" style="text-indent:19.85pt;">All details
+<p class="body">All details
 related to the model of the digital control system used in this paper are
 elaborated in this Section. The control task model is initially discussed,
 followed by a description of the structure of the digital control system set
@@ -393,24 +363,24 @@ a digital control system.</p>
 
 
 
-<h4>3.1. Task Model </h4>
+<p class="subhead">3.1. Task Model </p>
 
-<p align="justify" style="text-indent:19.85pt;">The
+<p class="body">The
 functionality of a digital control system set considered in this paper can be
 modeled as a control task set: <img src="003_files/image001.png">. Each control task has an in&#64257;nite
 periodic instantiation set otherwise known as a job set: <img src="003_files/image002.png">. The execution of four consecutive jobs from <img src="003_files/image003.png"> to <img src="003_files/image004.png"> is depicted in Figure 1. </p>
 
 <figure>
-<img src="003_files/image005.jpg" class="img"/>
+<img src="003_files/image005.jpg" class="article-img">
 
 <figcaption>
 Figure 1. Timing diagram for
 a typical digital control system</figcaption>
 </figure>
-<br>
 
 
-<p align="justify" style="text-indent:19.85pt;">The response
+
+<p class="body">The response
 time, <img src="003_files/image006.png">(start of sampling period to event
 (3)) for job<img src="003_files/image007.png">is the time it takes from the start
 of the sampling period to output the control law to the plant. Taking the
@@ -418,15 +388,14 @@ response time of a control task and one sampling period delay assumption into
 account (worst case delay between input to output), each control task has to
 adhere to the timing constraint given by (1), </p>
 
-<div class="eqn">
-<img src="003_files/image008.png" class="img">
-</div>
+<div class="equation">
+<img src="003_files/image008.png" class="eqn">
 <div class="eqn-number">(1)</div>
-<br>
+</div>
 
 
 
-<p align="justify"><img src="003_files/image009.png"> is the input sampling to outputting to the plant delay (event
+<p class="body"><img src="003_files/image009.png"> is the input sampling to outputting to the plant delay (event
 (2) to (3)) for job <img src="003_files/image007.png">. <img src="003_files/image010.png"> is the delay to output to the plant from the
 previous sampling period to the current sampling period (event (3)s from jobs <img src="003_files/image011.png"> to <img src="003_files/image012.png">). <img src="003_files/image013.png">is the sampling interval for job <img src="003_files/image007.png">,
 which is the delay from the input sampling event from the previous sampling
@@ -434,22 +403,22 @@ period to the current sampling period (event (1)s from jobs <img src="003_files/
 period <i>h<sub>i</sub></i>. The latter is always constant while the former
 varies from one period to the other.</p>
 
-<p align="justify" style="text-indent:19.85pt;">Using the terminology
+<p class="body">Using the terminology
 introduced in this Section, the three types of jitters considered in this paper
 are de&#64257;ned as follows:</p>
 
-<ul style="list-style-type: square;">
-	<li style="margin-left: 90px;">Sampling
+<ul>
+  <li>Sampling
 Jitter: Variation in <img src="003_files/image013.png">for <i>T<sub>i</sub></i>.</li>
 
-	<li style="margin-left: 90px;">Input-output
+  <li>Input-output
 Jitter: Variation in <img src="003_files/image009.png"> for <i>T<sub>i</sub></i>.</li>
 
-	<li style="margin-left: 90px;">Output
+  <li>Output
 Jitter: Variation in <img src="003_files/image014.png"> for <i>T<sub>i</sub></i>.</li>
 </ul>
 
-<p align="justify" style="text-indent:19.85pt;">When there
+<p class="body">When there
 is only one digital control system in the set, input-output and output jitter
 also exist. This is because the A/D and D/A conversions, RTOS scheduler
 execution, and control law calculation can jitter. However, sampling jitter
@@ -460,9 +429,9 @@ tandem because each task interferes with the other tasks' execution.</p>
 
 
 
-<h4>3.2. Model Structure </h4>
+<p class="subhead">3.2. Model Structure </p>
 
-<p align="justify" style="text-indent:19.85pt;">The digital
+<p class="body">The digital
 control system set used in this paper (also used in the performance evaluation)
 consists of &#64257;ve SISO independent digital control systems that execute in
 parallel. All &#64257;ve digital controllers of the &#64257;ve digital control
@@ -470,88 +439,85 @@ systems execute on a single processor. The model diagram of the structure of a
 digital control system in a set is depicted in Figure 2. </p>
 
 <figure>
-<img src="003_files/image015.jpg" class="img"/>
+<img src="003_files/image015.jpg" class="article-img">
 
 <figcaption>
 Figure 2. Model of the
 digital control system</figcaption>
 </figure>
-<br>
 
-<p align="justify" style="text-indent:19.85pt;">The two ADCs
+
+<p class="body">The two ADCs
 and DAC are modeled as sample and hold, and zero order hold devices
 respectively. Both types of devices have variable execution times so that they
 model real ADCs and DACs. The periodic work&#64258;ow of the model occurs as
 follows: </p>
 
 <ol>
-	<li style="margin-left: 90px;">Discretizing the inputs <i>r</i>(<i>t</i>) and <i>y</i>(<i>t</i>) using the ADCs via
+  <li>Discretizing the inputs <i>r</i>(<i>t</i>) and <i>y</i>(<i>t</i>) using the ADCs via
 sample and hold to produce <i>r(</i><img src="003_files/image016.png">) and
 <i>y</i>(<img src="003_files/image016.png"><i>j</i>).</li>
 
-	<li style="margin-left: 90px;">Comparing <i>r(</i><img src="003_files/image017.png">) and
+  <li>Comparing <i>r(</i><img src="003_files/image017.png">) and
 <i>y(</i><img src="003_files/image017.png">)  to
 produce the error signal <i>e(</i><img src="003_files/image017.png">).</li>
 
-	<li style="margin-left: 90px;">Executing the control
+  <li>Executing the control
 law by the PID controller to produce the control signal <i>u(</i><img src="003_files/image016.png">).</li>
 
-	<li style="margin-left: 90px;">Converting <i>u(</i><img src="003_files/image017.png">)  to
+  <li>Converting <i>u(</i><img src="003_files/image017.png">)  to
 a continuous time signal <i>u</i>(<i>t</i>) using the DAC and outputting it to the plant. </li>
 </ol>
 
-<h4>3.3.
-Con&#64257;gurations</h4>
+<p class="subhead">3.3.
+Con&#64257;gurations</p>
 
-<p align="justify" style="text-indent:19.85pt;">A con&#64257;guration is
+<p class="body">A con&#64257;guration is
 determined by the trigger method, which is either software or hardware to
 trigger the ADCs and DAC for all digital control systems within a set. These
 four con&#64257;gurations are described as follows:</p>
 
-<p align="justify"><b>Con&#64257;guration 1</b>: This is
+<p class="body"><b>Con&#64257;guration 1</b>: This is
 the most conservative con&#64257;guration out of the four because minimization
 of jitter is the main priority. Hardware is used to trigger both the ADCs and
 DAC at precise instants in time. </p>
 
 
-<p align="justify"><b>Con&#64257;guration 2</b>: Software
+<p class="body"><b>Con&#64257;guration 2</b>: Software
 is used to trigger the DAC whereas hardware is used to trigger both the ADCs.
 Sampling jitter is completely minimized in this con&#64257;guration while
 input-output and output jitter are much larger compared to con&#64257;guration
 1. </p>
 
-<p align="justify"><b>Con&#64257;guration 3</b>: Hardware
+<p class="body"><b>Con&#64257;guration 3</b>: Hardware
 is used to trigger the DAC while software is used to trigger both the ADCs. In
 this con&#64257;guration both sampling and input-output jitter are present
 whereas output jitter is minimized. </p>
 
-<p align="justify"><b>Con&#64257;guration 4</b>: This is the least
+<p class="body"><b>Con&#64257;guration 4</b>: This is the least
 conservative con&#64257;guration among the four due to not prioritizing jitter
 minimization. Software is used to trigger both the ADCs and DAC and hence,
 sampling, input-output, and output jitter are present.</p>
 
 
 
-<h2>4. Jitter Compensating PID
-Controller </h2>
+<h4>4. Jitter Compensating PID
+Controller </h4>
 
-<p align="justify" style="text-indent:19.85pt;">The design
+<p class="body">The design
 of the proposed solution is carried out in two main steps, which are,
 continuous-time design and discrete-time design. The purpose of the
 continuous-time design is to determine the appropriate rise time, which is used
 to derive the sampling period. The equation to calculate the sampling period
 according to Astrom and Wittenmark [3] is give by (2),</p>
 
-<div class="eqn">
-<img src="003_files/image018.png" class="img">
-</div>
+<div class="equation">
+<img src="003_files/image018.png" class="eqn">
 <div class="eqn-number">(2)</div>
-<br>
+</div>
 
 
-<p align="justify" style="text-indent:19.85pt;"><i>T<sub>r</sub>
-</i><span style='font-size:11.0pt;font-family:"Cambria","serif";
-color:black'>is the rise time and <i>N </i>is an integer. Astrom et al.
+<p class="body"><i>T<sub>r</sub></i> is the rise time and <i>N </i>is an integer. Astrom et al.
 suggests [4,10] whereas J. Liu suggests [10,20] for the
 value of <i>N</i>.
 This research uses the value of 10 because it is the middle value of the two
@@ -561,13 +527,13 @@ having a low sampling period yields good control performance. On the other
 hand, a low sampling period creates problems for scheduling multiple tasks as
 it increases the processor utilization. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The
+<p class="body">The
 resulting rise time after the design is usually less than or equal to the
 required rise time. Therefore, according to (2) a lower sampling period can be
 chosen if the rise time is decreased. Consequently, the performance of the
 digital control system is improved by utilizing a smaller sampling period. </p>
 
-<p align="justify" style="text-indent:19.85pt;">After
+<p class="body">After
 obtaining the sampling period from the continuous-time design, the next step is
 to discretize the continuous-time plant. Subsequently, the worst case delay
 between input sampling to outputting to the plant is taken as one sampling
@@ -578,22 +544,21 @@ sampling period delay is modeled as <i>z</i><sup>&#8722;</sup><sup>1</sup>. The 
 shown in Figure 3. </p>
 
 <figure>
-<img src="003_files/image019.jpg" class="img"/>
+<img src="003_files/image019.jpg" class="article-img">
 
 <figcaption>
 Figure 3. Discrete-time
 control system with a delay </figcaption>
 </figure>
-<br>
 
-<p align="justify" style="text-indent:19.85pt;">The next
+<p class="body">The next
 step in the design process is to tune the PID controller to satisfy performance
 requirements. This research used the PID tuner described by Mathworks [10] from
 Simulink. Tuning the PID controller involves using a graphical user interface
 with a slider that updates the plant output response when the position of the
 slider changed. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Finally, the
+<p class="body">Finally, the
 designed PID controller is interfaced with a continuous-time plant and
 reference input through two ADCs and a DAC. A comparison of the underlying
 Simulink simulation model of the PID controller that compensates for jitter
@@ -604,18 +569,18 @@ already strict timing budgets can bene&#64257;t from this solution. </p>
 
 
 
-<h2>5. Performance Evaluation </h2>
+<h4>5. Performance Evaluation </h4>
 
-<p align="justify" style="text-indent:19.85pt;">Details
+<p class="body">Details
 pertaining to evaluating performance of the proposed solution are presented in
 this Section. A discussion on the experimental setup is initially presented
 followed by a description of the method used to evaluate performance. </p>
 
 
 
-<h4>5.1. Experimental Setup </h4>
+<p class="subhead">5.1. Experimental Setup </p>
 
-<p align="justify" style="text-indent:19.85pt;">A Simulink
+<p class="body">A Simulink
 simulation based evaluation of the proposed solution is carried out to
 determine its effectiveness in the presence of software induced jitter. The
 digital control system set model described in Section 3.2 is simulated. For the
@@ -628,22 +593,22 @@ kernel </i>in the literature. A real-time kernel is used in the TrueTime kernel
 and EDF or Rate Monotonic (RM) is used as the task scheduling policies. This
 evaluation uses EDF to schedule the &#64257;ve digital control tasks. </p>
 
-<p align="justify" style="text-indent:19.85pt;">In this
+<p class="body">In this
 evaluation, the performance of the following three types of digital control
 system sets are compared: </p>
 
 
 
 <ol>
-	<li style="margin-left: 90px;"><i>NewComp</i>: The digital control
+  <li><i>NewComp</i>: The digital control
 systems are implemented using the four con&#64257;gurations and the proposed
 solution (jitter compensating PID) is used. </li>
 
-	<li style="margin-left: 90px;"><i>UnComp</i>: The digital control
+  <li><i>UnComp</i>: The digital control
 systems are implemented using the four con&#64257;gurations and the proposed
 solution is not used. </li>
 
-	<li style="margin-left: 90px;"><i>CompOnePeriod</i>: The digital control
+  <li><i>CompOnePeriod</i>: The digital control
 systems are implemented using only the &#64257;rst con&#64257;guration and the
 pro-posed solution is used. The &#64257;xed sampling to output delay for each
 digital control system is set to one sampling period. This digital control
@@ -653,7 +618,7 @@ system set is similar to what is used in the literature described in Section
 
 
 
-<p align="justify" style="text-indent:19.85pt;">During
+<p class="body">During
 performance evaluation, all digital control systems within a set (other than
 CompOnePeriod) use the same con&#64257;guration. Only the &#64257;rst digital
 control system in a set controls an actual plant, whereas the software for the
@@ -665,15 +630,14 @@ stabilizer example plant presented by Lozoya et al. [7] and Marti et al. [9] is
 used as the plant for the &#64257;rst digital control system. The transfer
 function of this plant is given by (3), </p>
 
-<div class="eqn">
-<img src="003_files/image020.png" class="img">
-</div>
+<div class="equation">
+<img src="003_files/image020.png" class="eqn">
 <div class="eqn-number">(3)</div>
-<br>
+</div>
 
 
 
-<p align="justify" style="text-indent:19.85pt;">The Simulink simulation
+<p class="body">The Simulink simulation
 model with TrueTime and the voltage stabilizer plant is shown in Figure 4.
 Design parameters including plant response characterizing performance
 requirements for the voltage stabilizer plant is depicted in Table 1.
@@ -681,18 +645,18 @@ Reasonable requirements were formulated as these types of requirements were not
 provided in the literature. </p>
 
 <figure>
-<img src="003_files/image021.jpg" class="img"/>
+<img src="003_files/image021.jpg" class="article-img">
 
 <figcaption>
 Figure 4. Simulink simulation
 model</figcaption>
 </figure>
-<br>
 
+<center>
 <div class="widetable">
+  <p class="body">Table 1. Design parameters for
+the voltage stabilizer digital control system example</p>
 <table>
-<caption>Table 1. Design parameters for
-the voltage stabilizer digital control system example</caption>
 <thead>
  <tr align="center" style="border-top:1px solid black; border-bottom:1px solid black">
   <td style="padding:5px"><b>Parameter</b></td>
@@ -719,12 +683,11 @@ the voltage stabilizer digital control system example</caption>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
+<p class="subhead">5.2. Method of Evaluation </p>
 
-<h4>5.2. Method of Evaluation </h4>
-
-<p align="justify" style="text-indent:19.85pt;">Two types of experiments
+<p class="body">Two types of experiments
 are carried out as part of the performance evaluation which are: step input and
 tracking. In the &#64257;rst experiment, the step input is used as the
 reference input and performance is measured using four metrics viz. percent overshoot,
@@ -740,20 +703,20 @@ duration. In both experiments the reference input is only used by the
 &#64257;rst digital control system in a digital control system set. </p>
 
 
-<h2>6. Performance Results </h2>
+<h4>6. Performance Results </h4>
 
-<p align="justify" style="text-indent:19.85pt;">The step input
+<p class="body">The step input
 experiment performance results are shown in Table 2. Performance results in
 bold font indicate a violation of performance requirements in Table 1. When
 compared to Table 1, NewComp and CompOnePeriod types satis&#64257;ed
 performance requirements, whereas UnComp was unable to satisfy the percent
 overshoot requirement. </p>
 
-
+<center>
 <div class="widetable">
+  <p class="body">Table 2. Voltage stabilizer digital
+control system average step input performance</p>
 <table>
-<caption>Table 2. Voltage stabilizer digital
-control system average step input performance</caption>
 <thead>
  <tr align="center">
   <td style="padding:5px; border:1px solid black; border-left:0"><b>System Type</b></td>
@@ -792,17 +755,17 @@ control system average step input performance</caption>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
 
-<p align="justify" style="text-indent:19.85pt;">From a real-time systems
+<p class="body">From a real-time systems
 perspective, satisfying timing constraints is important, however, results from UnComp
 show that despite meeting these constraints it is not a suf&#64257;cient
 condition to ensure satisfying performance require-ments. Therefore,
 compensation of delays is essential. An overall improvement in NewComp compared
 to the other two system sets is observed according to the IAE results. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The 95% con&#64257;dence
+<p class="body">The 95% con&#64257;dence
 intervals for the performance data in Table 2 is shown in Table 3. When
 comparing the con&#64257;dence intervals for each metric among the three
 different system set types for each individual con&#64257;guration, there is no
@@ -810,10 +773,10 @@ overlap in the con&#64257;dence intervals. This implies that the difference of
 a particular metric among the three system set types for each
 con&#64257;guration is statistically signi&#64257;cant. </p>
 
-
+<center>
 <div class="widetable">
+  <p class="body">Table 3. Voltage stabilizer digital control system step input performance 95% confidence intervals</p>
 <table>
-<caption>Table 3. Voltage stabilizer digital control system step input performance 95% confidence intervals</caption>
 <thead>
  <tr align="center">
   <td style="padding:5px; border:1px solid black; border-left:0"><b>System Type</b></td>
@@ -852,15 +815,16 @@ con&#64257;guration is statistically signi&#64257;cant. </p>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
-<p align="justify" style="text-indent:19.85pt;">Tracking performance results
+<p class="body">Tracking performance results
 are shown in Table 4 and it also demonstrates that NewComp performed better
 compared to CompOnePeriod and UnComp types.</p>
 
+<center>
 <div class="widetable">
+  <p class="body">Table 4. Voltage stabilizer digital control system average tracking performance</p>
 <table>
-<caption>Table 4. Voltage stabilizer digital control system average tracking performance</caption>
 <thead>
  <tr align="center">
   <td style="padding:5px; border:1px solid black; border-left:0"><b>System Type</b></td>
@@ -895,18 +859,19 @@ compared to CompOnePeriod and UnComp types.</p>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
-<p align="justify" style="text-indent:19.85pt;">Table 5 shows the 95%
+<p class="body">Table 5 shows the 95%
 con&#64257;dence intervals of the performance results in Table 4. There is no
 overlap in the con&#64257;dence intervals among the three different system set
 types for each con&#64257;guration. This implies that the difference in
 performance is statistically signi&#64257;cant.</p>
 
+<center>
 <div class="widetable">
+  <p class="body">Table 5. Voltage stabilizer digital
+control system tracking performance 95% confidence intervals</p>
 <table>
-<caption>Table 5. Voltage stabilizer digital
-control system tracking performance 95% confidence intervals</caption>
 <thead>
  <tr align="center">
   <td style="padding:5px; border:1px solid black; border-left:0"><b>System Type</b></td>
@@ -941,10 +906,10 @@ control system tracking performance 95% confidence intervals</caption>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
 
-<p align="justify" style="text-indent:19.85pt;">The performance results
+<p class="body">The performance results
 are not conclusive enough to judge which configuration has the best overall
 performance as there is overlap in the confidence intervals for the
 tracking performance results among the configurations for each system
@@ -954,9 +919,9 @@ software intervention. </p>
 
 
 
-<h2>7. Conclusion </h2>
+<h4>7. Conclusion </h4>
 
-<p align="justify" style="text-indent:19.85pt;">This paper presents a
+<p class="body">This paper presents a
 solution to compensate for software induced delays in digital control systems
 using PID con-trollers, and it focuses mainly on jitter compensation. The two
 main advantages of this solution are: plant response characterizing
@@ -976,114 +941,210 @@ control systems that have an input to output delay of one sampling period. This
 implies that reducing the delay between input to output is necessary to improve
 performance. </p>
 
-
-
-<img src="../images/line.png" width="100&#37;" height="1" />
-<H2><a name="references">References</a></H2>
-
-<p>[1] Aminifar, A., Eles,
+<h4 id="references">References</h4>
+<div class="ref">
+<p class="body">[1] Aminifar, A., Eles,
 P., Peng, Z. &amp; Cervin, A. (2013), Control-quality driven design of
 cyber-physical systems with robustness guarantees, <i>in </i>'Design,
 Automation &amp; Test in Europe (DATE 2013)', Grenoble, France, pp. 1093-1098. <a href="http://dx.doi.org/10.7873/DATE.2013.230" target="_blank">View Article</a></p>
 
-<p>[2] &Aring;str&ouml;m, K. J. &amp;
+<p class="body">[2] &Aring;str&ouml;m, K. J. &amp;
 Wittenmark, B. (1995), <i>PID Controllers: Theory, Design, and Tuning</i>,
 second edn, The Instrument Society of America, Research Triangle Park, NC. <a href="http://books.google.ca/books?id=nF1oQgAACAAJ&dq=PID+Controllers:+Theory,+Design,+and+Tuning&hl=en&sa=X&ei=qEVFVPGpPIucyQSArIC4Dw&redir_esc=y" target="_blank">View Book</a></p>
 
-<p>[3] &Aring;str&ouml;m, K. J. &amp;
+<p class="body">[3] &Aring;str&ouml;m, K. J. &amp;
 Wittenmark, B. (2011), <i>Computer-Controlled Systems</i>, third edn, Dover Publications,
 Mineola, NY. <a href="http://books.google.ca/books?id=TynEAgAAQBAJ&printsec=frontcover&dq=Computer-Controlled+Systems&hl=en&sa=X&ei=vEVFVNvWINGGyASe5YLYAQ&ved=0CCwQ6AEwAA#v=onepage&q&f=false" target="_blank">View Book</a></p>
 
-<p>[4] Cervin, A.,
+<p class="body">[4] Cervin, A.,
 Henriksson, D., Lincoln, B., Eker, J. &amp; &Aring;rz&eacute;n, K. E. (2003), 'How does
 control timing affect performance? analysis and simulation of timing using
 Jitterbug and TrueTime', <i>IEEE Control Systems Magazine </i>23(3), 16-30. <a href="http://dx.doi.org/10.1109/MCS.2003.1200240" target="_blank">View Article</a></p>
 
-<p>[5] Hong, S., Hu, X. S.
+<p class="body">[5] Hong, S., Hu, X. S.
 &amp; Lemmon, M. D. (2010), Reducing delay jitter of real-time control tasks
 through adaptive deadline adjustments, <i>in </i>'Real-Time Systems (ECRTS),
 2010 22nd Euromicro Conference on', Brussels, Belgium, pp. 229-238. <a href="http://dx.doi.org/10.1109/ECRTS.2010.10" target="_blank">View Article</a></p>
 
-<p>[6] Liu, Z., Zhao, H.,
+<p class="body">[6] Liu, Z., Zhao, H.,
 Li, P. &amp; Wang, J. (2009), An optimization model for IO jitter in
 device-level RTOS, <i>in </i>'Information Technology: New Generations, 2009.
 ITNG '09. Sixth International Conference on', Las Vagas, Nevada, USA, pp.
 1528-1533. <a href="http://dx.doi.org/10.1109/ITNG.2009.112" target="_blank">View Article</a></p>
 
-<p>[7] Lozoya, C., Velasco,
+<p class="body">[7] Lozoya, C., Velasco,
 M. &amp; Marti, P. (2008), 'The one-shot task model for robust real-time
 embedded control systems', <i>IEEE Transactions on Industrial Informatics </i>4(3),
 164-174. <a href="http://dx.doi.org/10.1109/TII.2008.2002702" target="_blank">View Article</a></p>
 
-<p>[8] Marti, P., Fuertes,
+<p class="body">[8] Marti, P., Fuertes,
 J. M., Fohler, G. &amp; Ramamritham, K. (2001), Jitter compensation for
 real-time control systems, <i>in </i>'Real-Time Systems Symposium, 2001. (RTSS
 2001). Proceedings. 22nd IEEE', London, England, pp. 39-48. <a href="http://dx.doi.org/10.1109/REAL.2001.990594" target="_blank">View Article</a></p>
 
-<p>[9] Marti, P., Velasco,
+<p class="body">[9] Marti, P., Velasco,
 M., Fuertes, J., Camacho, A. &amp; Buttazzo, G. (2010), 'Design of an embedded
 control system laboratory experiment', <i>IEEE Transactions on Industrial
 Electronics </i>57(10), 3297-3307. <a href="http://dx.doi.org/10.1109/TIE.2010.2040559" target="_blank">View Article</a></p>
 
-<p>[10] Mathworks (2013), <i>Simulink</i>&copy;<i>Control Design<sup>TM</sup>Users Guide</i>. <a href="http://www.mathworks.com/products/simcontrol/" target="_blank">View Article</a></p>
+<p class="body">[10] Mathworks (2013), <i>Simulink</i>&copy;<i>Control Design<sup>TM</sup>Users Guide</i>. <a href="http://www.mathworks.com/products/simcontrol/" target="_blank">View Article</a></p>
 
-<p>[11] Mathworks (2014),
+<p class="body">[11] Mathworks (2014),
 'Modeling computational delay and sampling effects'. consulted 18 October 2014.
 URL: <a href="http://www.mathworks.com/help/slcontrol/examples/modeling-computational-delay-and-sampling-effects.html" target="_blank">View Article</a></p>
 
-<p>[12] Nasri, M. &amp;
+<p class="body">[12] Nasri, M. &amp;
 Kargahi, M. (2012), A method for improving delay-sensitive accuracy in
 real-time embedded systems, <i>in </i>'Embedded and Real-Time Computing Systems
 and Applications (RTCSA), 2012 IEEE 18th International Confer-ence on', Seoul,
 Korea, pp. 378-387. <a href="http://dx.doi.org/10.1109/RTCSA.2012.39" target="_blank">View Article</a></p>
 
-<p>[13] Smeds, K. &amp; Lu,
+<p class="body">[13] Smeds, K. &amp; Lu,
 X. (2012), 'Effect of sampling jitter and control jitter on positioning error
 in motion control systems', <i>Precision Engineering </i>36(2), 175-192. <a href="http://dx.doi.org/10.1016/j.precisioneng.2011.09.002" target="_blank">View Article</a></p>
 
-<p>[14] Wu, Y., Buttazzo,
+<p class="body">[14] Wu, Y., Buttazzo,
 G., Bini, E. &amp; Cervin, A. (2010), 'Parameter selection for real-time
 controllers in resource-constrained systems', <i>IEEE Transactions on
 Industrial Informatics </i>6(4), 610-620. <a href="http://dx.doi.org/10.1109/TII.2010.2053378" target="_blank">View Article</a></p>
+</div> <!--REF -->
+  </div> <!--INDENT -->
 
-<div class="clearfix"></div>
+  </div> <!--Main Content -->
+</div>
+</div>
+
+  <footer>
+<div class="grid">
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer">
+      <ul class="footer-links">
+        <li><a href="/" class="body-link">Avestia Publishing</a></li>
+        <li><a href="journals" class="body-link">Journals</a></li>
+        <li><script>var refURL = window.location.protocol + "//" + window.location.host + window.location.pathname; document.write('<a href="http://international-aset.com/feedback/?refURL=' + refURL+'">Feedback</a>');</script></li>
+        <li><a href="terms" class="body-link">Terms of Use</a></li>
+        <li><a href="sitemap" class="body-link">Sitemap</a></li>
+      </ul>
+    </div>
   </div>
-<div class="clearfix"></div>
+
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer">
+      <p class="body">
+        Avestia Publishing,<br>
+        International ASET Inc.<br>
+        Unit 417, 1376 Bank St.<br>
+        Ottawa, ON, Canada, K1H 7Y3<br>
+        +1 613-695-3040<br>
+        <a href="mailto:info@avestia.com" class="body-link">info@avestia.com</a>
+      </p>
+    </div>
   </div>
-<div class="clearfix"></div>
-  </div>
 
-  </div>
-
-  <div class="footer">
-
-  <div class="container">
-
-  <div class="col-sm-7 footer-link">
-
-        <p><a href="/">Avestia Publishing</a></p>
-        <p><a href="../register/">Subscribe to our Mailing List</a></p>
-        <p><script>var refURL = window.location.protocol + "//" + window.location.host + window.location.pathname; document.write('<a href="http://avestia.com/feedback/?refURL=' + refURL+'">Feedback</a>');</script></p>
-        <p><a href="../terms/">Terms of Use</a></p>
-		<p><a href="../sitemap/">Sitemap</a></p>
-
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer social">
+    <form class="subscribe" action="../subscribe.php" method="post">
+            <span id="sprytextfield2"><input name="email" type="text" id="email" value="Join our mailing list"
+              onblur="if (this.value == '') {this.value = 'Join our mailing list';}"
+        onfocus="if (this.value == 'Join our mailing list') {this.value = '';}" ></span>
+      <input type="submit" name="submit" value="Submit" class="form_button" />
+        </form>
+        
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://www.facebook.com/pages/International-Academy-of-Science-Engineering-and-Technology/207827708283" target="blank" title="International ASET Inc. Facebook Page">
+          <img src="../img/fb.png" border="0" onmouseover="this.src='../img/fb-hover.png'" onmouseout="this.src='../img/fb.png'">
+        </a>
       </div>
-      <div class="col-sm-5 footer-txt">
-        <p>Avestia Publishing, International ASET Inc. </p>
-        <p>Unit No. 417, 1376 Bank St. </p>
-        <p>Ottawa, Ontario, Canada </p>
-        <p>Postal Code: K1H 7Y3</p>
-        <p>Phone Number: 1-613-695-3040</p>
 
-  </div>
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://twitter.com/ASET_INC" target="blank" title="International ASET Inc. Twitter">
+          <img src="../img/twitter.png" border="0" onmouseover="this.src='../img/twitter-hover.png'" onmouseout="this.src='../img/twitter.png'">
+        </a>
+      </div>
 
-  </div>
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://www.linkedin.com/company/1169039" target="blank" title="International ASET Inc. LinkedIn">
+          <img src="../img/linkedin.png" border="0" onmouseover="this.src='../img/linkedin-hover.png'" onmouseout="this.src='../img/linkedin.png'">
+        </a>
+      </div>
 
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://plus.google.com/u/0/+International-aset/posts" target="blank" title="International ASET Inc. Google+ Page">
+          <img src="../img/google.png" border="0" onmouseover="this.src='../img/google-hover.png'" onmouseout="this.src='../img/google.png'">
+        </a>
+      </div>
+
+      <p class="body">© Copyright 2015, International ASET Inc. – All Rights Reserved.</p>
+    </div>
   </div>
 
 </div>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.js"></script>
-</body>
+</footer>
+</div>
 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/cbpAnimatedHeader.min.js"></script>
+    <script src="../js/SpryValidationSelect.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationTextField.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationConfirm.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationCheckbox.js" type="text/javascript"></script>
+    <script src="../js/SpryValidationTextarea.js" type="text/javascript"></script>
+
+<script src="../js/classie.js"></script>
+<script src="../js/jquery.easing.js"></script>
+<script src="../js/jquery.mousewheel.js"></script>
+<script defer src="../js/demo.js"></script>
+<script type="text/javascript" src="../css/animate.min.css"></script>
+<script type="text/javascript" src="../js/jnav.js"></script>
+
+<script type="text/javascript">
+<!--
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "email");
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
+var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2", {invalidValue:"-1"});
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
+var sprytextfield5 = new Spry.Widget.ValidationTextField("sprytextfield5");
+var sprytextfield6 = new Spry.Widget.ValidationTextField("sprytextfield6");
+//-->
+</script>
+
+    <script type="text/javascript">
+/*
+  Slidemenu
+*/
+(function() {
+  var $body = document.body
+  , $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+  if ( typeof $menu_trigger !== 'undefined' ) {
+    $menu_trigger.addEventListener('click', function() {
+      $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+    });
+  }
+
+}).call(this);
+</script>
+
+<script type="text/javascript">
+/*
+  Slidemenu
+*/
+(function() {
+  var $body = document.body
+  , $menu_trigger = $body.getElementsByClassName('menu-trigger-1')[0];
+
+  if ( typeof $menu_trigger !== 'undefined' ) {
+    $menu_trigger.addEventListener('click', function() {
+      $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+    });
+  }
+
+}).call(this);
+</script>
+</body>
 </html>

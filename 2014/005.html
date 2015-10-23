@@ -1,203 +1,176 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="utf-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noarchive">
+<meta name="description" content="The Volume 1 published for JACR Journal.">
+<meta name="keywords" content="avestia, publishing, journals, papers, science, renewable energy">
 <title>JACR - Learning Robotic Concepts with a 3R Lego NXT Robotic Arm</title>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
 
-<link href='http://fonts.googleapis.com/css?family=Antic+Slab:300,400,400italic,500,600,700,700italic&amp;subset=latin,greek-ext,cyrillic,latin-ext,greek,cyrillic-ext,vietnamese' rel='stylesheet' type='text/css' />
+<meta name="handheldfriendly" content="true">
+<meta name="mobileoptimized" content="240">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../css/style.css" />
+<link href="../css/avestia.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon">
+<!--[if IE-9]><html lang="en" class="ie9"><![endif]-->
 
-<link href="../css/bootstrap.css" rel="stylesheet">
-<link href="../images/icon.ico" rel="shortcut icon" type="image/x-icon">
-<!--Goole Analytics Most Visited Article Code-->
+<script src="../js/modernizr.custom.63321.js"></script>
+<script type="text/javascript" src="../mostvisited.js"></script> 
+<script type="text/javascript" src="../mostvisitedExt.js"></script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-47353717-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', 'UA-68628727-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
-
-
-<!-- Include Most Visited Articles JS Code -->
- <script type="text/javascript" src="mostvisited.js"></script> 
-
-<!-- Include SHARE THIS js sources -->
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "8f49e037-5155-4595-abc0-d069deae6488", doNotHash: true, doNotCopy: false, hashAddressBar: false, onhover:false});</script>
+<script>
+  (function() {
+    var cx = '016656741306535874023:f_iiykae6ri';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 </head>
+<body class="loading">
+<nav id="slide-menu">
+  <h1>Avestia Publishing</h1>
+  <ul>
+    <li><a href="about">About Us</a></li>
+    <li><a href="ethics">Ethics in Publishing</a></li>
+    <li><a href="openaccess">Open Access</a></li>
+    <li><a href="editor">Become a Reviewer or an Editor</a></li>
+    <li><a href="publishing">Your Publishing Needs</a></li>
+    <li><a href="proceedings">Conference Proceedings</a></li>
+    <li><a href="news">Latest News</a></li>
+    <li><a href="guidelines">Author Guidelines</a></li>
+    <li><a href="journals">Journals</a></li>
+    <li><a href="http://amss.avestia.com/">Submission</a></li>
+    <li><a href="copyright">Copyright</a></li>
+    <li><a href="contact">Contact Us</a></li>
+  </ul>
+</nav>
 
-<body>
+<div id="content">
+  <div class="desktop">
+      <div class="cbp-af-header">
+  <div class="cbp-af-inner">
+    <a href="/"><img src="../img/logo.svg" class="flex-logo" alt="Avestia Publishing"></a>
 
-<div id="wrapper">
-
-  <div class="header">
-
-    <div class="container">
-
-      <div class="row">
-
-        <header id="header">
-          <div class="logo col-sm-4"><a href="http://avestia.com"><img src="/images/logo.png" alt="Journal" class="img" /></a></div>
-          <div class="threemenu col-sm-5">
-            <div class="row"><a class="link col-sm-4" href="http://avestia.com"><img src="/images/home.jpg" class="img"></a> <a class="link col-sm-4" href="http://avestia.com/journals/"><img src="/images/journals.jpg" class="img"></a> <a class="link col-sm-4" href="http://amss.avestia.com"><img src="/images/submit.jpg" class="img"></a></div>
-          </div>
-          <div class="searching col-sm-3">
-<div class="sharethis">Share this page:<br/>
-<span class='st_email'></span>
-<span class='st_facebook'></span>
-<span class='st_twitter'></span>
-<span class='st_googleplus'></span>
-<span class='st_linkedin'></span>
-</div>
-            
-         <div class="search_wrapper">
-         <form class="search" action="../results" method="get">
-              <fieldset>
-                <span class="text">
-                <input name="q" id="q" type="text" value="" placeholder="Search..." /><button class="search_top_button">GO</button>
-                </span>
-
-              </fieldset>
-            </form>
-            
-            </div>
-          </div>
-          <div class="col-lg-12">
-
-          <div class="avada-row">
-
-            <nav id="nav" class="nav-holder">
-
-              <div role="navigation" class="navbar navbar-default">
-
-                <div class="container-fluid">
-
-                  <div class="navbar-header">
-                  
-                    <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-<span class="navbar-brand" href="#">Menu</span>
-                  </div>
-
-                  <div class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav">
-
-					<li><a href="/">Journal Home</a></li><span class="menu-line">|</span>
-                        <li><a href="../aims/">Aims and Scopes</a></li><span class="menu-line">|</span>
-                        <li><a href="../charges/">Article Processing Charges</a></li><span class="menu-line">|</span>
-                        <li><a href="../guidelines/">Author Guidelines</a></li><span class="menu-line">|</span>
-                        <li><a href="../board/">Editorial Board</a></li><br>
-                        <li><a href="../volumes/">Past Volumes</a></li><span class="menu-line">|</span>
-                        <li><a href="../current/">Current Volume</a></li><span class="menu-line">|</span>
-                        <li><a href="../propose/">Propose a Special Topic</a></li><span class="menu-line">|</span>
-                        <li><a href="../register/">Receive Updates</a></li><span class="menu-line">|</span>
-                        <li><a href="../contact/">Contact Us</a></li>
-
-
-
-                    </ul>
-
-                  </div>
-
-                  <!--/.nav-collapse -->
-
-                </div>
-
-                <!--/.container-fluid -->
-
-              </div>
-
-            </nav>
-
-            </div>
-
-          </div>
-          <div class="clearfix"></div>
-
-        </header>
-
-      </div>
-
+    <div class="nav1">
+      <nav>
+        <a href="/">Home</a>
+        <a href="http://amss.avestia.com/">Submission</a>
+        <a href="journals">Journals</a>
+        <a href="ethics">Ethics in Publishing</a>
+        <a href="guidelines">Author Guidelines</a>
+      </nav>
     </div>
-<div class="clearfix"></div>
+
+    <div class="search-menu">
+      <div class="menu-trigger-1"><p class="menu">MENU</p></div><br>
+      <gcse:searchbox-only resultsUrl="results"></gcse:searchbox-only>
+    </div>
+
+    <div class="nav2">
+      <nav>
+        <a href="/">Home</a>
+        <a href="http://amss.avestia.com/">Submission</a>
+        <a href="journals">Journals</a>
+        <a href="ethics">Ethics in Publishing</a>
+        <a href="guidelines">Author Guidelines</a>
+      </nav>
+    </div>
   </div>
-
-  <div class="slider">
-
-  <div class="container">
-
-  <div class="row"><div class="col-lg-12"><img class="img2" src="../images/header.png" alt="img"></div></div>
-
-  </div>
-
-  </div>
-
-<div class="container">
-  <div class="clearfix"></div>
-  <div class="row">
-
-  <div class="col-lg-12 text">
-  
-<div align=center>
-<div class="table">
-
-    <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 style='border:none; width: 100%'>
-         <tr>
-                <td>Volume 1, Year 2014 - Pages 38-44</td>
-                <td align="right"><a href="PDF/005.pdf">View PDF (Full-text)</a></td>
-        </tr>
-         <tr>
-                <td>DOI: 10.11159/jacr.2014.005</td>
-                <td align="right"><a href="#references">Linked References</a></td>
-        </tr>
-		<tr>
-		<td colspan="2">ISSN: 2368-6677</td>
-		</tr>
-     </table>
-     
 </div>
+  </div>
+
+  <header>
+    <div class="mobile">
+      <div class="cbp-af-header">
+  <div class="cbp-af-inner">
+    <div class="unit unit-s-3-4 unit-m-1-3 unit-l-1-3">
+          <a href="/"><img src="../img/logo.svg" class="flex-logo" alt="Avestia Publishing"></a>
+      </div>
+      <div class="unit unit-s-1-3 unit-m-2-3 unit-m-2-3-1 unit-l-2-3">
+          <div class="menu-trigger"></div>
+      </div>
+  </div>
+</div>
+      <div class="bg">
+        <gcse:searchbox-only resultsUrl="results"></gcse:searchbox-only>
+      </div>
+    </div> <!--Mobile -->
+  </header>
+
+  <div class="j-header-article">
+  <div class="name">
+    <h1>Journal of Automation and Control Research (JACR)<br>
+    <p class="body">ISSN: 2368-6677</p></h1>
+    <div class="oalink">
+    <a href="/openaccess" target="blank" title="Avestia's Open Access">
+          <img src="../img/j-oa.png" border="0" onmouseover="this.src='../img/j-oa-hover.png'" onmouseout="this.src='../img/j-oa.png'" class="j-oa">
+    </a>
+  </div>
+  </div>
 </div>
 
-<br>
+  <div role="navigation" class="navbar navbar-default">
+  <ul>
+    <li><a href="">Journal Home</a></li>
+    <li><a href="aims">Aims & Scopes</a></li>
+    <li><a href="fee">Publishing Fee</a></li>
+    <li><a href="board">Editorial Board</a></li>
+    <li><button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">Volumes</button></li>
+    <li><a href="contact">Contact Us</a></li>
+  </ul>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="volume1/issue1">Volume 1, Issue 1</a></li>
+      <li><a href="volume2">Volume 2</a></li>
+      <li><a href="current">Current Volume</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
 
-<p align="center" style="font-size:22pt;">Learning Robotic Concepts with a 3R Lego NXT Robotic Arm</p>
+<div class="grid">
+<div class="unit unit-s-1 unit-m-1 unit-l-1">
+  <div class="main-content j-home">
+    <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-1-2">
+      <p class="body">Volume 1, Year 2014 - Pages 38-44<br>
+      DOI: 10.11159/jacr.2014.005</p>
+    </div>
 
-<p align="center">
+    <div class="unit unit-s-1 unit-s-1-2 unit-m-1-2 unit-l-1-2 a-link">
+        <a href="PDF/005.pdf" class="body-link" class="body-link">View PDF (Full-text)</a><br>
+      <a href="#references" class="body-link">Linked References</a>
+    </div>
 
-    <strong>Michael Thompson<sup>1</sup>, Victoria M. Serrano R.<sup>1</sup>, Jordan E. Willem Noriega<sup>2</sup>, Vanessa Martinez<sup>3</sup></strong>
+    <h3 class="center">Learning Robotic Concepts with a 3R Lego NXT Robotic Arm</h3>
+
+    <p class="body-bold center">Michael Thompson<sup>1</sup>, Victoria M. Serrano R.<sup>1</sup>, Jordan E. Willem Noriega<sup>2</sup>, Vanessa Martinez<sup>3</sup></p>
+
+    <p class="body center"><sup>1</sup>Arizona State University, 1151 S. Forest Ave, Tempe, Arizona
+      <br>mjthomp3@asu.edu; vmserran@asu.edu
     
-        <br><sup>1</sup>Arizona State University, 1151 S. Forest Ave, Tempe, Arizona
-	    <br>mjthomp3@asu.edu; vmserran@asu.edu
-		
-		<br><sup>2</sup>Arizona State University, School of Sustainable Engineering and the Built Environment, 1151 S. Forest Ave, Tempe, Arizona, 85281
-		<br>jewillem@asu.edu
-		
-		<br><sup>3</sup>Arizona State University, School of Electrical, Computer, and Energy Engineering, 1151 S. Forest Ave, Tempe, Arizona, 85281
-		<br>vimartin@asu.edu
-        
-</p>
+    <br><sup>2</sup>Arizona State University, School of Sustainable Engineering and the Built Environment, 1151 S. Forest Ave, Tempe, Arizona, 85281
+    <br>jewillem@asu.edu
     
+    <br><sup>3</sup>Arizona State University, School of Electrical, Computer, and Energy Engineering, 1151 S. Forest Ave, Tempe, Arizona, 85281
+    <br>vimartin@asu.edu</p>
 
-<p align="justify"><i><strong>Abstract- </strong>
-In this paper we present the use of a 3R Lego robotic arm for teaching basic robotic
+    <p class="body"><b>Abstract</b> - <i>In this paper we present the use of a 3R Lego robotic arm for teaching basic robotic
 concepts. The Lego Mindstorms NXT kit is an affordable equipment that can be
 used to better visualize robotic concepts usually taught in classes. The 3R
 Lego Robot has 2 degrees of freedom and has been equiped with an accelerometer
@@ -226,28 +199,25 @@ understanding and implementing basic robotic concepts in Matlab and Simulink
 together with a 3R Lego robot. Therefore, a more complex Simulink model can be
 developed for controller design purposes. This paper describes a comparison of
 a simulation model versus a real life system for helping students to understand
-modeling system theories versus real world applications. </i></p>
+modeling system theories versus real world applications.</i></p>
 
-<p align="left"><i><strong>Keywords:</strong></i> 3R lego robot,
+    <p class="body"><b><i>Keywords:</i></b> 3R lego robot,
 Simulink, Matlab, Forward and inverse kinematics, DH parameters, Trajectory planning.</p>
 
-<p>&nbsp;</p>
-<p align="justify">  &copy; Copyright 2014 Authors - This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
+    <p class="body">© Copyright 2015 Authors This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" class="body-link" target="_blank" class="body-link">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
 
-<p>&nbsp;</p>
-
-<p>
-    Date Received: 2014-05-21 <br />
+    <p class="body">Date Received: 2014-05-21 <br />
     
     Date Accepted: 2014-09-04  <br />
     
-    Date Published: 2014-10-28
-</p>
+    Date Published: 2014-10-28</p>
 
-<img src="../images/line.png" width="100%;" height="1" />
-<h2>1. Introduction</h2>
+  <div class="border"></div>
 
-<p align="justify" style="text-indent:19.85pt;">As technology
+  <div class="indent">
+<h4>1. Introduction</h4>
+
+<p class="body">As technology
 advances, engineers have always been interested in mimicking animal or
 human-like behaviors using robots. A great motivation to study robotics is how
 often they are used in industrial applications. Someone would be hard-pressed
@@ -279,7 +249,7 @@ software for the synthesis, analysis, simulation and control of the same robot
 [12]. Nonetheless, although they allow to have a better understanding of real
 physical systems, they become expensive for educational purposes. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Recent studies
+<p class="body">Recent studies
 demonstrate the extended use of Lego NXT kits for educational purposes [13],
 [14]. While most of them have been used for controller design [15], [16], [17]
 and signal processing manipulation [18], the number of articles found for
@@ -296,7 +266,7 @@ such as robotics [22], system identification [23], control system tuning
 [24] and optimization [25] that leads to a better understanding of control
 systems and robotics. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Our goal is to
+<p class="body">Our goal is to
 build and program a robotic arm using critical robotic concepts. This includes
 forward and inverse kinematic equations, DH parameters, force and velocity
 manipulability ellipsoids with the use of Simulink and Matlab. The Lego
@@ -306,9 +276,9 @@ through the use of existent Matlab toolboxes. </p>
 
 
 
-<h2>2. Methods </h4>
+<h4>2. Methods </h4>
 
-<p align="justify" style="text-indent:19.85pt;">In order to
+<p class="body">In order to
 control the robot arm to accomplish the task, several analyses were needed
 including the forward and inverse kinematics, the workspace, trajectory
 planning and the force and velocity manipulability ellipsoids at the
@@ -323,18 +293,18 @@ kinematics function can be expressed by the homogeneous transformation matrix. <
 
 
 
-<h4>2.1. DH Convention</h4>
+<p class="subhead">2.1. DH Convention</p>
 
 <figure>
-<img src="005_files/image001.png" class="img"/>
+<img src="005_files/image001.png" class="article-img">
 
 <figcaption>
 Figure 1. The kinematic model
 of the Lego robot arm</figcaption>
 </figure>
-<br>
 
-<p align="justify" style="text-indent:19.85pt;">Since the
+
+<p class="body">Since the
 manipulator structure is an open kinematic chain, each joint connects two and
 only two consecutive links. Therefore, it is reasonable to first
 describe the kinematic relationship between consecutive links and then to
@@ -343,43 +313,41 @@ fashion [1]. To this purpose, the Denavit-Hartenberg (DH) convention was used
 to construct the direct kinematics function by composition of the individual
 coordinate transformations expressed by Eq. 1. </p>
 
-<div class="eqn">
-<img src="005_files/image002.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image002.png" class="eqn">
 <div class="eqn-number">(1)</div>
-<br>
+</div>
 
 
-<p align="justify" style="text-indent:19.85pt;">The frame for
+<p class="body">The frame for
 each link was defined as shown in Fig. 1. Therefore, the coordinate
 transformation describing the position and orientation of the end-effector frame
 with respect to the base frame is given by Eq. 2,</p>
 
-<div class="eqn">
-<img src="005_files/image003.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image003.png" class="eqn">
 <div class="eqn-number">(2)</div>
-<br>
+</div>
 
-<p align="justify" style="text-indent:19.85pt;">Therefore, the
+<p class="body">Therefore, the
 homogeneous transformation matrix for this manipulator is shown below. </p>
 
-<div class="eqn">
-<img src="005_files/image004.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image004.png" class="eqn">
 <div class="eqn-number">(3)</div>
-<br>
+</div>
 
-<p align="justify" style="text-indent:19.85pt;">Consider the
+<p class="body">Consider the
 arm in Fig. 1, where the base and the link frames have been illustrated. The
 axes <i>xi </i>were chosen to minimize the calculation. The DH parameters are
 specified in the table 1. It is worth pointing out that the frame 3 does
 not coincide with the end-effector frame and the end-effector frame can differ
 due to the different tasks. </p>
 
+<center>
 <div class="widetable">
+  <p class="body">Table 1. Lego arm D-H parameters</p>
 <table>
-<caption>Table 1. Lego arm D-H parameters</caption>
 <thead>
  <tr align="center">
   <td style="padding:5px; border:1px solid black; border-right:3px double black"><i>i</i></td>
@@ -421,12 +389,11 @@ due to the different tasks. </p>
 </tbody>
 </table>
 </div>
-<br>
+</center>
 
+<p class="subhead">2.2. Forward Kinematics </p>
 
-<h4>2.2. Forward Kinematics </h4>
-
-<p align="justify" style="text-indent:19.85pt;">If the task is to be specified
+<p class="body">If the task is to be specified
 for the end-effector, it is necessary to assign the end-effector position as a
 function of time. On the other hand, the joint space denoted the space in the
 vector of the joint variables (&#952;1,
@@ -435,23 +402,22 @@ dependence of position from the joint variables, the forward kinematics
 equation can be written in the form of Eq. 4 which is obtained from Eq. 3. </p>
 
 
-<div class="eqn">
-<img src="005_files/image005.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image005.png" class="eqn">
 <div class="eqn-number">(4)</div>
-<br>
+</div>
 
 
-<p align="justify" style="text-indent:19.85pt;">This expression shows
+<p class="body">This expression shows
 three joint space variables that allow specifications of at most three
 independent operational space variables. On the other hand, the orientation is
 not a concern, thus all joint angles can be fully defined given a
 position of the end-effector. </p>
 
 
-<h4>2.3. Inverse Kinematics </h4>
+<p class="subhead">2.3. Inverse Kinematics </p>
 
-<p align="justify" style="text-indent:19.85pt;">The inverse kinematics
+<p class="body">The inverse kinematics
 problem consists of the determination of the joint variables corresponding to a
 given end-effector position. The solution to this problem is of fundamental
 importance in order to transform the motion specifications, assigned to
@@ -461,28 +427,25 @@ manipulator is not a redundant structure, it is easy to compute the closed-form
 solution for the inverse kinematics based on Eq. 3. Therefore, the solution for
 the inverse kinematics can be obtained as: </p>
 
-<div class="eqn">
-<img src="005_files/image006.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image006.png" class="eqn">
 <div class="eqn-number">(5)</div>
-<br>
-
-<div class="eqn">
-<img src="005_files/image007.png" class="img">
 </div>
+
+<div class="equation">
+<img src="005_files/image007.png" class="eqn">
 <div class="eqn-number">(6)</div>
-<br>
-
-<div class="eqn">
-<img src="005_files/image008.png" class="img">
 </div>
+
+<div class="equation">
+<img src="005_files/image008.png" class="eqn">
 <div class="eqn-number">(7)</div>
-<br>
+</div>
 
 
-<h4>2.4. Workspace</h4>
+<p class="subhead">2.4. Workspace</p>
 
-<p align="justify" style="text-indent:19.85pt;">The workspace is the
+<p class="body">The workspace is the
 region described by the origin of the end-effector frame when all the manipulator
 joints execute all possible motions [3]. Since the manipulator has less than 6
 degrees of freedom (DOFs), it cannot take any arbitrary position and
@@ -491,23 +454,23 @@ guarantee all the positions along the path are reachable for the manipulator.
 In order to simplify the calculation, we chose the end-effector as the center
 of the third joint and the workspace is shown as Fig. 2a. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Given a set of joint
+<p class="body">Given a set of joint
 variables, the values of the operational space variables deviate from those
 computed via direct kinematics and the direct kinematics equation is dependent
 on the DH parameters by Eq. 4. </p>
 
 <figure>
-<img src="005_files/image009.png" class="img"/>
+<img src="005_files/image009.png" class="article-img">
 
 <figcaption>
 Figure 2. Workspace and velocity manipulability
 ellipsoids</figcaption>
 </figure>
-<br>
 
-<h4>2.5. Computation of the Jacobian Matrix </h4>
 
-<p align="justify" style="text-indent:19.85pt;">After establishing the
+<p class="subhead">2.5. Computation of the Jacobian Matrix </p>
+
+<p class="body">After establishing the
 relationship between the joint variables and the end-effector position, we are
 able to compute the differential kinematics to map the joint angle velocities
 and the end-effector velocities. Therefore, if the end-effector location is
@@ -515,25 +478,23 @@ expressed with the reference to a minimal representation in the operational
 space, the Jacobian matrix can be computed via differentiation of the forward
 kinematics function with respect to the joint variables [1]: </p>
 
-<div class="eqn">
-<img src="005_files/image010.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image010.png" class="eqn">
 <div class="eqn-number">(8)</div>
-<br>
+</div>
 
-<p align="justify" style="text-indent:19.85pt;">Therefore, we are able to
+<p class="body">Therefore, we are able to
 compute the general version of the Jacobian matrix for our Lego arm and the
 result shows as below: </p>
 
-<div class="eqn">
-<img src="005_files/image011.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image011.png" class="eqn">
 <div class="eqn-number">(9)</div>
-<br>
+</div>
 
-<h4>2.6. Velocity Manipulability Ellipsoids </h4>
+<p class="subhead">2.6. Velocity Manipulability Ellipsoids </p>
 
-<p align="justify" style="text-indent:19.85pt;">The evaluation of the
+<p class="body">The evaluation of the
 manipulator is very helpful for determining suitable manipulator postures to
 execute a given task in the current configuration. Therefore, it is
 necessary to compute the velocity manipulability ellipsoids for all the configurations
@@ -542,11 +503,10 @@ configurations, and more importantly, it can help us to obtain an idea of
 the capability at the end-effector for all configurations. Consider the
 set of joint velocities of unit norm [3]: </p>
 
-<div class="eqn">
-<img src="005_files/image012.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image012.png" class="eqn">
 <div class="eqn-number">(10)</div>
-<br>
+</div>
 
 
 <p align="justify">this equation describes the points on the surface
@@ -554,31 +514,30 @@ of a sphere in the joint velocity space. Through the differential kinematics
 equation 4 solved for the joint velocities, we can obtain that: </p>
 
 
-<div class="eqn">
-<img src="005_files/image013.png" class="img">
-</div>
+<div class="equation">
+<img src="005_files/image013.png" class="eqn">
 <div class="eqn-number">(11)</div>
-<br>
+</div>
 
 
 <figure>
-<img src="005_files/image014.png" class="img"/>
+<img src="005_files/image014.png" class="article-img">
 
 <figcaption>
 Figure 3. Motion of the robotic arm </figcaption>
 </figure>
-<br>
 
 
-<p align="justify" style="text-indent:19.85pt;">For our Lego arm, since it
+
+<p class="body">For our Lego arm, since it
 is a nonredundant manipulator, the points on the surface of the sphere in the
 joint velocity space are mapped into the points on the surface of the ellipsoid
 in the end-effector velocity space as shown in Fig. 2b. </p>
 
 
-<h4>2.7. Simulink Programming </h4>
+<p class="subhead">2.7. Simulink Programming </p>
 
-<p align="justify" style="text-indent:19.85pt;">The Simulink model
+<p class="body">The Simulink model
 encompasses three motors and six time signals. The motors are connected up and
 work together in a time sequence in order for the 3R Lego robot to work
 properly within the desired design specifications. The entire robot ran for
@@ -594,9 +553,9 @@ other motor would stop and start. To correct this the global configuration
 of the motors had to be looked at so that the motors functioned in sequence yet
 independent of one another as shown in Fig 3a. </p>
 
-<h4>2.8. Trajectory Planning </h4>
+<p class="subhead">2.8. Trajectory Planning </p>
 
-<p align="justify" style="text-indent:19.85pt;">Given an initial configuration
+<p class="body">Given an initial configuration
 and a final assigned posture, we selected a path for the end-effector in
 the operating space based on workspace and manipulability ellipsoids analysis.
 We divided the motions into several parts, including (1) reach an object, (2)
@@ -608,13 +567,13 @@ part of the motion. Based on the inverse kinematics, each part of the motion
 only needs one joint to move which simplifies the calculation. Fig. 3b
 shows the result for Part 1 of the motion, reaching the object. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The position curve shows
+<p class="body">The position curve shows
 that the initial joint angle is 90 degrees and the final joint angle is 0
 degrees. The arm starts from rest and end at rest. </p>
 
-<h4>2.9. Data Collection </h4>
+<p class="subhead">2.9. Data Collection </p>
 
-<p align="justify" style="text-indent:19.85pt;">An acceleration sensor was
+<p class="body">An acceleration sensor was
 placed at the end-effector and connected to port 1. The sampling rate we set
 was 0.01 seconds. This allowed the sensor to collect as much information as
 possible within the ten seconds of running the actual program. This sensor
@@ -628,7 +587,7 @@ coincide with the rest of our calculations. Additionaly, the acceleration in
 the x, y and z axes was used to calculate the tilt angle with respect to each
 axis. Then, it was compared to the simulation results from Matlab. </p>
 
-<p align="justify" style="text-indent:19.85pt;">Additionaly,
+<p class="body">Additionaly,
 we used a gyroscope to collect the angular velocity of the link of the robotic
 arm every 0.01 seconds. This gyroscope is capable of
 measuring the angular velocity with respect to one axis at a time within a
@@ -642,9 +601,9 @@ differentiation of the smoothed angular velocity was performed to calculate the
 angular acceleration of the robotic arm for the first 2 seconds of its
 trajectory. </p>
 
-<h2>3. Results </h2>
+<h4>3. Results </h4>
 
-<p align="justify" style="text-indent:19.85pt;">After a myriad of
+<p class="body">After a myriad of
 attempts, we successfully programmed and discovered a worthy process for the 3R
 Lego robot. The path planned trajectory was designed to specification and
 allowed for 5 basic steps of the trajectory. This process was tested many
@@ -654,7 +613,7 @@ fully utilized in order to pick up an object, avoid an obstacle, and place it
 back down. Outlined below is a successful process of an iteration of the 3R
 Lego robot. </p>
 
-<p align="justify" style="text-indent:19.85pt;">The acceleration sensor
+<p class="body">The acceleration sensor
 was used to measure the actual acceleration at the end-effector. The sensor
 data that was collected shows a linear acceleration at the end-effector for 10
 seconds of data collection. As the motors are switching to perform different
@@ -663,16 +622,16 @@ the sensor shows the acceleration due to gravity for the z axis combined with
 the linear acceleration of the object. One cannot distinguish the actual
 acceleration in each axis when the sensor is being rotated. </p>
 
-<p align="justify" style="text-indent:19.85pt;">An advantage of having an
+<p class="body">An advantage of having an
 accelerometer is that it has high accuracy with our applications and is more efficient
 to calculate the angular position of the end-effector. A big disadvantage is
 that the sensor may not be sufficient to obtain angular velocity and
 acceleration. </p>
 
 
-<h2>4. Conclusion </h2>
+<h4>4. Conclusion </h4>
 
-<p align="justify" style="text-indent:19.85pt;">We have shown that a 3R
+<p class="body">We have shown that a 3R
 Lego robotic arm can be used to understand basic robotic concepts. A hands-on
 approach was compared to theoretical results through the use of Matlab and
 Simulink. An acceleration sensor and a gyroscope were required to obtain the
@@ -685,154 +644,251 @@ of forward and inverse kinematics that will allow a better control of the
 robotic arm. </p>
 
 
-<h2>Acknowledgments </h2>
+<h4>Acknowledgments </h4>
 
-<p align="justify" style="text-indent:19.85pt;">The authors of this paper
+<p class="body">The authors of this paper
 would like thank the Ira A. Fulton Schools of Engineering at Arizona State
 University for their support and funding of SHPE (Society of Hispanic
 Professional Engineers) de ASU Robotics. Without their funding, purchasing the
 Lego Robotics kits that were used would not have been possible and much of the
 research done could not have been completed. </p>
 
-
-<img src="../images/line.png" width="100&#37;" height="1" />
-<H2><a name="references">References</a></H2>
-
-<p>[1] Niku, S. B. (2001). <i>An
+<h4 id="references">References</h4>
+<div class="ref">
+<p class="body">[1] Niku, S. B. (2001). <i>An
 Introduction to Robotics Analysis, Systems, Applications</i>. NJ: Prentice Hall. <a href="http://books.google.ca/books?id=AaUeAQAAIAAJ&q=An+Introduction+to+Robotics+Analysis,+Systems,+Applications&dq=An+Introduction+to+Robotics+Analysis,+Systems,+Applications&hl=en&sa=X&ei=Gw9RVMvOM4O8yQSd_oCgBw&redir_esc=y" target="_blank">View Book</a></p>
 
-<p>[2] Spong, M., Hutchinson,
+<p class="body">[2] Spong, M., Hutchinson,
 S. and Vidyasagar, M. (2006). <i>Robot modeling and control</i>. NY: John Wiley
 &amp; Sons. <a href="http://books.google.ca/books?id=wGapQAAACAAJ&dq=Robot+modeling+and+control&hl=en&sa=X&ei=Kg9RVMjxNIeMyATW44DQBA&redir_esc=y" target="_blank">View Book</a></p>
 
-<p>[3] Sciavicco, L. and
+<p class="body">[3] Sciavicco, L. and
 Siciliano, B. (2000). <i>Modelling and control of robot manipulators</i>. NY: Springer. <a href="http://books.google.ca/books?id=v9PLbcYd9aUC&printsec=frontcover&dq=Modelling+and+control+of+robot+manipulators&hl=en&sa=X&ei=Og9RVP7TEML2yQSZ8oLACQ&redir_esc=y#v=onepage&q&f=false" target="_blank">View Book</a></p>
 
-<p>[4] Rajeevlochana, C.G.,
+<p class="body">[4] Rajeevlochana, C.G.,
 and Saha, S.K. (2011). RoboAnalyzer: 3D Model Based Robotic Learning Software. <i>International
 Conference on Multi Body Dynamics</i>, 3-13. <a href="http://web.iitd.ac.in/~saha/public_html-old/icmbd11rajeev.pdf" target="_blank">View Article</a></p>
 
-<p>[5] Rajeevlochana, C. G.,
+<p class="body">[5] Rajeevlochana, C. G.,
 Jain, A., Shah, S. V., and Saha, S. K. (2011). Recursive Robot Dynamics in
 RoboAnalyzer. <i>15th National Conference on Machines and Mechanisms (NaCoMM)</i>,
 482-490. <a href="http://www.nacomm2011.ammindia.org/files/papers/nacomm2011_attachment_34_1.pdf" target="_blank">View Article</a></p>
 
-<p>[6] Bahuguna J.,
+<p class="body">[6] Bahuguna J.,
 Chittawadigi R. G., and Saha, S. K. (2013.) Teaching and Learning of Robot
 Kinematics Using RoboAnalyzer Software. <i>Advances in Robotics</i>. <a href="http://dx.doi.org/10.1145/2506095.2506142" target="_blank">View Article</a></p>
 
-<p>[7] Jaramillo-Botero, A.,
+<p class="body">[7] Jaramillo-Botero, A.,
 Matta-Gomez, A., Correa-Caicedo, J. F. and Perea-Castro, W. (2006). ROBOMOSP. <i>Robotics
 &amp; Automation Magazine, IEEE</i>, <i>13</i>(4), 62-73. <a href="http://dx.doi.org/10.1109/MRA.2006.250572" target="_blank">View Article</a></p>
 
-<p>[8] RoboWorks Software. <i>Newtonium
+<p class="body">[8] RoboWorks Software. <i>Newtonium
 Web site</i>. Retrieved from http://www.newtonium.com/. <a href="http://www.newtonium.com/public_html/Products/RoboWorks/RoboWorks.htm" target="_blank">View Article</a></p>
 
-<p>[9] Easy-ROB3D Software. <i>Easy-ROB
+<p class="body">[9] Easy-ROB3D Software. <i>Easy-ROB
 Web site</i>. Retrieved from <a href="http://www.easy-rob.com/" target="_blank">View Article</a></p>
 
-<p>[10] Toz, M., Kucuk, S.
+<p class="body">[10] Toz, M., Kucuk, S.
 (2010). Dynamics Simulation Toolbox for Industrial Robot Manipulators. <i>Computer
 Applications in Engineering Education</i>, <i>18</i>(2), 319-330. <a href="http://dx.doi.org/10.1002/cae.20262" target="_blank">View Article</a></p>
 
-<p>[11] Hayat, A. A.,
+<p class="body">[11] Hayat, A. A.,
 Chittawadigi, R. G., Udai, A. D., and Saha, S. K. (2013). Identification
 of Denavit-Hartenberg Parameters of an Industrial Robot. <i>AIR'13 Proceedings
 of Conference on Advances In Robotics</i>, 1-6. <a href="http://dx.doi.org/10.1145/2506095.2506121" target="_blank">View Article</a></p>
 
-<p>[12] Gonzalez-Palacios M.
+<p class="body">[12] Gonzalez-Palacios M.
 A., Gonzalez-Barbosa, E. A., Aguilera-Cortes, L. A. (2013). SnAM: a simulation
 software on serial manipulators. <i>Engineering with Computers</i>, <i>29</i>, 87-94.
 <a href="http://dx.doi.org/10.1007/s00366-011-0246-6" target="_blank">View Article</a></p>
 
-<p>[13] Behrens et al.
+<p class="body">[13] Behrens et al.
 (2010). MATLAB Meets LEGO Mindstorms-A Freshman Introduction Course Into
 Practical Engineering. <i>IEEE Trans. on Education</i>, <i>53</i>(2), 306-317. <a href="http://dx.doi.org/10.1109/TE.2009.2017272" target="_blank">View Article</a></p>
 
-<p>[14] Green, A. (2013). LEGO
+<p class="body">[14] Green, A. (2013). LEGO
 Robotics in STEM Education. <i>D&amp;T Practice, 1,</i> 22-24. <a href="https://community.education.lego.com/legodev/attachments/legodev/LE_LessonPlanLibrary_TKB/16/1/LEGO%C2%AE%20Robotics%20in%20STEM%20Education.pdf" target="_blank">View Article</a></p>
 
-<p>[15] A. Cruz-Martin et al.
+<p class="body">[15] A. Cruz-Martin et al.
 (2012). A LEGO Mindstorms NXT approach for teaching at Data Acquisition,
 Control Systems Engineering and Real-Time Systems undergraduate courses. <i>Computers
 and Education</i>, <i>59,</i> 974-988. <a href="http://dx.doi.org/10.1016/j.compedu.2012.03.026" target="_blank">View Article</a></p>
 
-<p>[16] Y. Kim. (2011). Control
+<p class="body">[16] Y. Kim. (2011). Control
 Systems Lab Using a LEGO Mindstorms NXT Motor System. <i>IEEE Trans. on
 Education</i>, <i>54</i>(3), 452-461. <a href="http://dx.doi.org/10.1109/TE.2010.2076284" target="_blank">View Article</a></p>
 
-<p>[17]
+<p class="body">[17]
 A. Valera et al. (2011). Design and Implementation of Kalman Filters applied to
 Lego NXT based Robots. <i>Preprints of the 18th IFAC World Congress</i>, 9830-9835.
 <a href="http://www.nt.ntnu.no/users/skoge/prost/proceedings/ifac11-proceedings/data/html/papers/2799.pdf" target="_blank">View Article</a></p>
 
-<p>[18]
+<p class="body">[18]
 Ferri, B. H. et al. (2009). Signal Processing Experiments with the LEGO
 MINDSTORMS NXT Kit for Use in Signal and Systems Courses. <i>American Control
 Conference</i>, 3787-3792. <a href="http://dx.doi.org/10.1109/ACC.2009.5160602" target="_blank">View Article</a></p>
 
-<p>[19] Hamori, A., Lengyel,
+<p class="body">[19] Hamori, A., Lengyel,
 J. and Resko, B. (2011). 3DOF drawing robot using LEGO-NXT. <i>15th
 International Conference on Intelligent Engineering Systems (INES)</i>, 293-295.
 <a href="http://dx.doi.org/10.1109/INES.2011.5954761" target="_blank">View Article</a></p>
 
-<p>[20] Moral, J. A. B.
+<p class="body">[20] Moral, J. A. B.
 (2009). Develop lejos programs step by step. Retrieved from www.juanantonio.info/. <a href="http://www.juanantonio.info/lejos-ebook/" target="_blank">View Article</a> </p>
 
-<p>[21] Nee, Y. Y. (2007). <i>ROBOTIC
+<p class="body">[21] Nee, Y. Y. (2007). <i>ROBOTIC
 ARM SYSTEM BY USING LEGO MINDSTORMS</i> (Unpublished dissertation). Universiti
 Teknikal Malaysia Melaka, Malaysia. 
 
-<p>[22] Corke, P.I. (2011). <i>Robotics,
+<p class="body">[22] Corke, P.I. (2011). <i>Robotics,
 Vision &amp; Control</i>. Springer. <a href="http://books.google.ca/books?id=hdkytqtBcyQC&printsec=frontcover&dq=Robotics,+Vision+%26;+Control&hl=en&sa=X&ei=lxBRVPz0DZK0yASY0YDwCQ&ved=0CDQQ6AEwAA#v=onepage&q&f=false" target="_blank">View Book</a></p>
 
-<p>[23] Ljung, L. (1999). <i>System
+<p class="body">[23] Ljung, L. (1999). <i>System
 Identification, Theory for the User</i>. NJ: Prentice Hall. <a href="http://books.google.ca/books?id=fYSrk4wDKPsC&printsec=frontcover&dq=System+Identification,+Theory+for+the+User&hl=en&sa=X&ei=rhBRVPWAPcumyASiz4GgCQ&ved=0CCwQ6AEwAA#v=onepage&q&f=false" target="_blank">View Book</a></p>
 
-<p>[24] Golnaraghi, F., Kuo,
+<p class="body">[24] Golnaraghi, F., Kuo,
 B. C. (2009). <i>Automatic Control Systems</i>. NY: WILEY. <a href="http://books.google.ca/books?id=dXCruQAACAAJ&dq=Automatic+Control+Systems&hl=en&sa=X&ei=vRBRVOXEAZSkyASmiILYBw&ved=0CEcQ6AEwBA" target="_blank">View Book</a></p>
 
-<p>[25]
+<p class="body">[25]
 Nocedal, J., Wrigth, S. (2006). <i>Numerical Optimization</i>. NY: Springer. <a href="http://books.google.ca/books?id=VbHYoSyelFcC&printsec=frontcover&dq=Numerical+Optimization&hl=en&sa=X&ei=0xBRVI_bFI6NyATBjYIw&ved=0CCcQ6AEwAA#v=onepage&q&f=false" target="_blank">View Book</a></p>
+</div> <!--REF -->
+  </div> <!--INDENT -->
 
-<div class="clearfix"></div>
+  </div> <!--Main Content -->
+</div>
+</div>
+
+  <footer>
+<div class="grid">
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer">
+      <ul class="footer-links">
+        <li><a href="/" class="body-link">Avestia Publishing</a></li>
+        <li><a href="journals" class="body-link">Journals</a></li>
+        <li><script>var refURL = window.location.protocol + "//" + window.location.host + window.location.pathname; document.write('<a href="http://international-aset.com/feedback/?refURL=' + refURL+'">Feedback</a>');</script></li>
+        <li><a href="terms" class="body-link">Terms of Use</a></li>
+        <li><a href="sitemap" class="body-link">Sitemap</a></li>
+      </ul>
+    </div>
   </div>
-<div class="clearfix"></div>
+
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer">
+      <p class="body">
+        Avestia Publishing,<br>
+        International ASET Inc.<br>
+        Unit 417, 1376 Bank St.<br>
+        Ottawa, ON, Canada, K1H 7Y3<br>
+        +1 613-695-3040<br>
+        <a href="mailto:info@avestia.com" class="body-link">info@avestia.com</a>
+      </p>
+    </div>
   </div>
-<div class="clearfix"></div>
-  </div>
 
-  </div>
-
-  <div class="footer">
-
-  <div class="container">
-
-  <div class="col-sm-7 footer-link">
-
-        <p><a href="/">Avestia Publishing</a></p>
-        <p><a href="../register/">Subscribe to our Mailing List</a></p>
-        <p><script>var refURL = window.location.protocol + "//" + window.location.host + window.location.pathname; document.write('<a href="http://avestia.com/feedback/?refURL=' + refURL+'">Feedback</a>');</script></p>
-        <p><a href="../terms/">Terms of Use</a></p>
-		<p><a href="../sitemap/">Sitemap</a></p>
-
+  <div class="unit unit-s-1 unit-s-1-3 unit-m-1-3 unit-l-1-3">
+    <div class="unit-spacer social">
+    <form class="subscribe" action="../subscribe.php" method="post">
+            <span id="sprytextfield2"><input name="email" type="text" id="email" value="Join our mailing list"
+              onblur="if (this.value == '') {this.value = 'Join our mailing list';}"
+        onfocus="if (this.value == 'Join our mailing list') {this.value = '';}" ></span>
+      <input type="submit" name="submit" value="Submit" class="form_button" />
+        </form>
+        
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://www.facebook.com/pages/International-Academy-of-Science-Engineering-and-Technology/207827708283" target="blank" title="International ASET Inc. Facebook Page">
+          <img src="../img/fb.png" border="0" onmouseover="this.src='../img/fb-hover.png'" onmouseout="this.src='../img/fb.png'">
+        </a>
       </div>
-      <div class="col-sm-5 footer-txt">
-        <p>Avestia Publishing, International ASET Inc. </p>
-        <p>Unit No. 417, 1376 Bank St. </p>
-        <p>Ottawa, Ontario, Canada </p>
-        <p>Postal Code: K1H 7Y3</p>
-        <p>Phone Number: 1-613-695-3040</p>
 
-  </div>
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://twitter.com/ASET_INC" target="blank" title="International ASET Inc. Twitter">
+          <img src="../img/twitter.png" border="0" onmouseover="this.src='../img/twitter-hover.png'" onmouseout="this.src='../img/twitter.png'">
+        </a>
+      </div>
 
-  </div>
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://www.linkedin.com/company/1169039" target="blank" title="International ASET Inc. LinkedIn">
+          <img src="../img/linkedin.png" border="0" onmouseover="this.src='../img/linkedin-hover.png'" onmouseout="this.src='../img/linkedin.png'">
+        </a>
+      </div>
 
+      <div class="unit unit-s-1-1 unit-m-1-1 unit-l-1-1">
+        <a href="https://plus.google.com/u/0/+International-aset/posts" target="blank" title="International ASET Inc. Google+ Page">
+          <img src="../img/google.png" border="0" onmouseover="this.src='../img/google-hover.png'" onmouseout="this.src='../img/google.png'">
+        </a>
+      </div>
+
+      <p class="body">© Copyright 2015, International ASET Inc. – All Rights Reserved.</p>
+    </div>
   </div>
 
 </div>
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.js"></script>
-</body>
+</footer>
+</div>
 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/cbpAnimatedHeader.min.js"></script>
+    <script src="../js/SpryValidationSelect.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationTextField.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationConfirm.js" type="text/javascript"></script>
+
+    <script src="../js/SpryValidationCheckbox.js" type="text/javascript"></script>
+    <script src="../js/SpryValidationTextarea.js" type="text/javascript"></script>
+
+<script src="../js/classie.js"></script>
+<script src="../js/jquery.easing.js"></script>
+<script src="../js/jquery.mousewheel.js"></script>
+<script defer src="../js/demo.js"></script>
+<script type="text/javascript" src="../css/animate.min.css"></script>
+<script type="text/javascript" src="../js/jnav.js"></script>
+
+<script type="text/javascript">
+<!--
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "email");
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
+var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2", {invalidValue:"-1"});
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
+var sprytextfield5 = new Spry.Widget.ValidationTextField("sprytextfield5");
+var sprytextfield6 = new Spry.Widget.ValidationTextField("sprytextfield6");
+//-->
+</script>
+
+    <script type="text/javascript">
+/*
+  Slidemenu
+*/
+(function() {
+  var $body = document.body
+  , $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+  if ( typeof $menu_trigger !== 'undefined' ) {
+    $menu_trigger.addEventListener('click', function() {
+      $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+    });
+  }
+
+}).call(this);
+</script>
+
+<script type="text/javascript">
+/*
+  Slidemenu
+*/
+(function() {
+  var $body = document.body
+  , $menu_trigger = $body.getElementsByClassName('menu-trigger-1')[0];
+
+  if ( typeof $menu_trigger !== 'undefined' ) {
+    $menu_trigger.addEventListener('click', function() {
+      $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+    });
+  }
+
+}).call(this);
+</script>
+</body>
 </html>
