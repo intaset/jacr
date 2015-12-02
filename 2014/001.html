@@ -5,7 +5,7 @@
 <meta name="robots" content="noarchive">
 <meta name="description" content="The Volume 1 published for JACR Journal.">
 <meta name="keywords" content="avestia, publishing, journals, papers, science, renewable energy">
-<title>JACR -  State Dependent Riccati Equation Control of an Active Hydro-Pneumatic Suspension System</title>
+<title>JACR -  Alternative Vision Approach to Ground Vehicle Detection System Utilizing Single Board Computer (SBC) for Motor Control</title>
 
 <meta name="handheldfriendly" content="true">
 <meta name="mobileoptimized" content="240">
@@ -164,913 +164,671 @@
       <a href="#references" class="body-link">Linked References</a>
     </div>
 
-    <h3 class="center">State Dependent Riccati Equation Control of an Active Hydro-Pneumatic Suspension System</h3>
+    <h3 class="center">Alternative Vision Approach to Ground Vehicle Detection System Utilizing Single Board Computer (SBC) for Motor Control</h3>
 
-    <p class="body-bold center">Ferhat Sa&#287;lam<sup>1</sup>, Y. Samim &#220;nl&#252;soy<sup>2</sup></p>
+    <p class="body-bold center">Nurul Izzati Mohd. Saleh, Md. Farhan Aizuddin, Wan Rahiman</p>
 
-    <p class="body center"><sup>1</sup>ASELSAN Inc., 06172 Yenimahalle, Ankara, Turkey
-      <br>fesaglam@gmail.com
-        
-        <br><sup>2</sup>2Middle East Technical University, Mechanical Engineering Department, Dumlupinar Bulvari, No:1, 6800 Ankara, Turkey
-      <br>unlusoy@metu.edu.tr</p>
+    <p class="body center">Universiti Sains Malaysia Engineering Campus, School of Electrical & Electronic Engineering<br>
+    Seberang Perai Selatan, Nibong Tebal, Pulau Pinang, 14300, Malaysia<br>
+    nims14_eee041@student.usm.my; michael3a10@gmail.com; wanrahiman@usm.my</p>
 
-    <p class="body"><b>Abstract</b> - <i>In this
-study, a nonlinear active Hydro-Pneumatic (HP) suspension system is modelled. The HP
-suspension system model is then incorporated into the quarter car model and a nonlinear
-controller for the vehicle system is developed. A linear structured
-model with state dependent matrices of the nonlinear quarter car model is
-derived for use in controller design. A nonlinear control method, State
-Dependent Riccati Equation control (SDRE) is used to attenuate sprung mass
-acceleration, suspension deflection, and tire deflection. The performance of
-the controller is examined in both frequency and time domains. Active HP
-suspension system is simulated with sinusoidal inputs at discrete amplitudes
-and frequencies, and the approximate frequency response functions are obtained.
-The active HP suspension system is simulated with random road inputs and the
-root mean square values of the responses are used to evaluate the performance
-of the controller. The results show that the active suspension successfully and
-simultaneously decreases the sprung mass acceleration, suspension deflection,
-and tire deflection around body bounce frequency and thus improved ride comfort
-and road holding are obtained.</i></p>
+    <p class="body"><b>Abstract</b> - <i>This paper presented an alternative approach for ground vehicle identification for vehicle following. The vision system is tested for its feasibility in image processing on a limited resources platform. The limited resources platform consists of off-the-shelf webcam as vision sensor, single board computer (SBC) as its main hardware and a microcontroller as a sensor board. The image processing library used for image processing is OpenCV, an open source library. For optimization purposes Design of Experiment (DOE) is used to determine the factors that contribute to the accuracy of the vehicle identification. This system is then attached serially to ultrasonic sensor in order to demonstrate the safety system for the follower vehicle. The experimental results reveal that the approach under limited resources platform is able to identify the needed features to indicate presence of a ground vehicle to some extent. The paper also highlights the limitations of the system which may be addressed in future works.</i></p>
 
-    <p class="body"><b><i>Keywords:</i></b> Hydro-Pneumatic suspension, Active
-control, State Dependent Riccati Equation, Nonlinear control</p>
+    <p class="body"><b><i>Keywords:</i></b> Ground vehicle; Autonomous vehicle; Vision system; Median filter; OpenCV.</p>
 
     <p class="body">© Copyright 2015 Authors This is an Open Access article published under the <a href="http://creativecommons.org/licenses/by/3.0" class="body-link" target="_blank" class="body-link">Creative Commons Attribution License terms</a>. Unrestricted use, distribution, and reproduction in any medium are permitted, provided the original work is properly cited.</p>
 
-    <p class="body">Date Received: 2014-06-08 <br />
-    
-    Date Accepted: 2014-09-04  <br />
-    
-    Date Published: 2014-10-10</p>
+    <p class="body">Date Received: 2015-05-24<br>
+    Date Accepted: 2015-11-09<br >
+    Date Published: TBA</p>
 
   <div class="border"></div>
 
   <div class="indent">
-<h4>1. Introduction</h4>
+  <h4>1. Introduction</h4>
 
+  <p class="body">Road injuries and fatalities are a growing concern in Malaysia. There has been an increase in the number of deaths due to road accidents from 6,286 deaths in 2003 to 6,917 in 2012. From the fatality distribution by mode of transport chart, fatalities caused by car as the mode of transport made up 22 % from the overall chosen modes [1].</p>
+  <p class="body">In urban driving environment, accidents or collisions especially in traffic congestion scenario usually occur due to human error such as misjudged distance, loss of control, poor manoeuvring and sudden braking. Drivers sometimes misjudge the distance between their cars and the vehicles in front of them during traffic jams such as rush hour or road congestion due to road works, resulting in collisions when the vehicles in front apply the brakes without warning. Therefore, there is a need for a robust vision system to allow ground vehicles to detect the presence of vehicle in front of them.</p>
+  <p class="body">This paper focuses on urban driving scenario where accidents
+involving motorized vehicles often happen during traffic congestion for
+example, during peak hours. A webcam-based approach to identify whether a
+ground vehicle is present in front of the autonomous vehicle is proposed in
+this study.</p>
 
+<h4>2. Related Work</h4>
 
-<p class="body">A suspension system is expected to
-isolate the vehicle body from road disturbances and keep the tires in contact
-with the road. Ride comfort is directly related with sprung mass acceleration
-and road holding is associated with tire deflection. Passive suspension systems
-can satisfy ride comfort and handling requirements only to a limited extend. To
-improve suspension performance, various active and semi-active suspensions have
-been proposed in the literature and there are numerous studies on the active
-control of the conventional suspension systems. Models of active systems in
-these studies are mostly linear and thus linear control methods have been
-applied to determine the desired active force. In some of the studies,
-hydraulic actuators which provide active force are included in the model and
-thus actuator dynamics are also taken into account. Basic functions of the
-suspensions, suspension control methodologies, and the theoretical and
-practical limitations of the controllable suspensions were examined in the
-study of the Karnopp and Heess [1]. Butsuen [2] examined invariant properties of the quarter car
-model and analysed different performance considerations in active suspension
-systems. Elmadany
-[3] proposed an optimal linear active suspension system controlled by a
-multivariable integral control. Alleyne et al. [4] examined linear and
-nonlinear control methods in active suspension systems. The desired active
-force was obtained using skyhook control methods and the realization of this
-desired control force from the hydraulic actuator was performed using
-Proportional, Integral, and Derivative (PID) control, feedback linearization control,
-and sliding control. They showed that active suspension with a nonlinear
-control method provided better performance than that with linear control.
-Pilbeam and Sharp [5] examined different active suspension system
-configurations with preview control together with power consumptions. Thompson
-and Chaplin [6] studied the inner loop force control in active suspensions.
-Applications of the optimal control theory in vehicle dynamics area were
-investigated in the study of Sharp and Peng [7]. There are other studies on
-active suspensions with conventional suspension systems which uses control
-approaches like H-infinity control [8], switched control [9], hybrid control [10], and fuzzy control [11].</p>
+<p class="body">Existing works in the research and development of visual guidance
+technology can be categorized into two major categories: Unmanned Ground
+Vehicles (UGVs) and Intelligent Transport Systems (ITSs) [2]. UGVs study deal with off-road navigation and terrain mapping [3]. ITS study on the other hand, is
+concentrated more on efficient transport in structured or urban settings. There
+are several roles that can be assigned to the vision system which are detection
+and following of a road [4], detection of obstacles ,
+detection and tracking of other vehicles and detection and identification of
+landmarks [5].</p>
 
-<p class="body">Relatively few studies about
-the active control of the quarter car model with HP suspension system, however,
-have appeared in the literature. HP suspension systems are used commonly in
-heavy commercial vehicles and on-off road military vehicles. A HP suspension
-system has a gas volume, two oil volumes, and an orifice in its basic
-structure. Gas volume provides the suspension spring characteristics and the
-flow of oil through the orifice separating the two oil volumes provides the
-suspension damping characteristics. HP suspension systems are suitable for
-active and semi-active suspension implementations [12]. By changing the orifice
-opening area, a semi-active HP suspension system can be developed. Similarly,
-by introducing oil into or by extracting oil from the system from an external
-source, an active HP suspension system is obtained. However, for a conventional suspension
-system, a separate active force generator is required to achieve an active
-suspension system. </p>
+<p class="subhead">2.1. Imaging System</p>
+<p class="body">There are two types of imaging system, active and passive system. The related review discussed will be focusing on the latter system. In order to
+obtain good quality data input to guidance algorithm there are several considerations to be taken in choosing
+the cameras for passive imaging in outdoor environments [2].</p>
+<p class="body">One of the common image
+acquisition methods that can be used is through passive camera system [4]. Camera peripheral are often
+chosen due to their availability, and the resolution can be varied to suit the
+needs. With multiple inputs of images from different sides of the vehicle
+obtained from more than one camera, an algorithm was designed by computing a
+maximum value of every row for every field and the average of these maximum
+values of the five fields was then used as the threshold value of each row
+after integral compensation. The formulae are generated after a few repetitive
+experiments. This method is reported by [4] to be lacking in terms of its robustness
+towards different types of conditions and illumination.</p>
+<p class="body">Other method of image acquisition that can be utilized is by using
+stereovision camera [3], [5], [6]. Stereovision-based distance
+measurement provides reasonably good accuracy for objects within a short
+distant range. However, due to the reported matching ambiguity, quantization
+errors and inaccurate parameters of the camera model from various sources by [6], this method has poor accuracy
+for objects at long distance. Thus further processing is needed in order to
+compensate for these shortcomings.</p>
 
-<p class="body">El-Demerdash and Crolla [13]
-studied the active and slow-active HP suspension systems with preview control.
-They developed a linear HP suspension system and used a linear optimal control
-approach for the active suspension. Gao et al. [14] linearized a HP suspension model
-and then obtained a reduced model to be used in the control applications. The
-objective of the controller was disturbance rejection and body leveling
-control. Linear quadratic control was used for the disturbance rejection. For
-leveling control, PID control which used the suspension deflection as the
-feedback was designed. Shi et al. [15] linearized a HP suspension model using
-feedback linearization method and then applied the sliding mode control to the
-linearized HP model to get an active HP suspension system. There are also
-studies about the active suspension of interconnected HP suspension systems.
-Rosam and Darling [16] designed an active roll controller to improve the roll
-motion for the interconnected HP suspension system. Schuman and Anderson [17]
-used an optimal control
-law to design a controller for an active suspension to control the roll motion
-in an interconnected HP suspension system. The nonlinear interconnected
-hydragas suspension model was linearized to design the linear optimal
-controller.</p>
+<p class="subhead">2. 2. Image Processing</p>
+<p class="body">Morphological operation in image processing context is the means
+for obtaining image components that are functional in characterizing and
+describing the shape region such as boundaries, skeleton and convex hull [7]. Morphological operations are
+usually performed on binary images. There are two morphological operations that
+are considered which are dilation and erosion.</p>
+<p class="body">Dilation is a morphological operation that thickens or expands the
+white region. Dilation is useful when the region of interest (ROI) is too small
+for further processing or when there are broken parts that need to be joined as
+an object. Erosion on the other hand is a morphological operation that removes
+excessive white pixels. Erosion is useful for removing small white noises or
+separating two connected regions [8].</p>
+<p class="body">In order to remove smaller detected regions usually due to noise,
+and to enlarge the areas of object of interests, sequence of erode and dilate
+operation are involved in the morphological operation where the effect is, and
+to close any holes within them.</p>
 
-<p class="body">It is observed that, most of the studies
-related to the design of controllers for active suspensions involve
-conventional linear suspension systems. For these systems well-known linear
-control methods can be used to design the controller. There are, on the other
-hand, few studies about the active control of the HP suspension system with
-nonlinear controllers. Since the HP suspension system is inherently nonlinear
-due to the orifice and the gas equations, the designed controller should also
-be nonlinear to capture the system dynamics thoroughly. Linearizing the
-nonlinear HP suspension system for specific operating point and designing the
-controller for that point does not cover the whole dynamics of the system. For
-this reason, a nonlinear controller is essential to capture the real behavior. </p>
+<p class="subhead">2. 3. Feature Extraction</p>
+<p class="body">One of the feature extraction methods covered in this literature
+review is by using Scale Invariant Feature Transform (SIFT) [5]. SIFT is a method for extracting
+distinctive invariant features from images that can be used to perform reliable
+matching between different views of an object or scene. However, to implement
+this method, it requires a lot of processing resources. To reduce the SIFT
+computational time, Self-Organizing Map (SOM) is used to improve the matching process [5].</p>
+<p class="body">There are also other key-point descriptors that are available such
+as BRISK, SURF and BRIEF.</p>
+<p class="body">Another method is to detect
+the outer contours or edge of the object of interest [3]. For image processing, the
+algorithm can be designed by importing the relevant libraries from OpenCV.
+OpenCV (Open Source Computer Vision Library) is a computer vision and machine
+learning software library. It is developed as an open source and used as an
+alternative to MATLAB, and serves to provide foundation for computer vision
+purposes and function aid of the use of machine perception in the commercial
+products [9].</p>
+<p class="body">To date, OpenCV provides the library for the feature extraction
+method discussed (SIFT, SURF, BRIEF and BRISK); to name a few.</p>
+<p class="body">For this project, the
+vision system utilizes passive monocular camera which only focuses on image
+processing.</p>
 
-<p class="body">Designing a suboptimal nonlinear
-controller for the quarter car with a nonlinear active HP suspension in a
-systematic manner is the main target of this study. The basic concern is the
-design of the active HP suspension to obtain improved ride comfort together
-with improved handling, taking the nonlinear behavior of the system into
-consideration. Therefore, a state space model with SDM of the nonlinear HP
-suspension system is derived by the extended linearization [18] to be used for the controller design.
-Polytropic gas model is rewritten as a polynomial gas equation such that the
-gas force is a polynomial function of the relative gas displacement. Thus, the
-gas force is expressed in terms of a linear stiffness equation with a state
-dependent spring coefficient. Similarly, the orifice equation is written as a linear
-damping equation with state dependent viscous coefficient. By this way, all
-nonlinearities of the original nonlinear HP suspension system are preserved.
-Then, a nonlinear control method, SDRE control, is used to design the nonlinear
-active controller. A nonlinear active controller is designed effectively and
-systematically instead of using more complicated formal nonlinear control
-approaches. The proposed method can also be applied to suspension system with
-different types of nonlinear spring and damper characteristics easily.
-Moreover, as explained in the reference [19], saturation
-on the oil flow rate can also be incorporated with the SDRE control. The
-control designers are required only to adjust the weighting parameters of the
-performance variables according to the aim of the control. </p>
-
-<p class="body">State Dependent Riccati Equation (SDRE)
-control is a systematic way of designing a nonlinear controller. It is similar
-to the Linear Quadratic Regulator (LQR) control and by applying the SDRE
-control as a nonlinear control method, all properties of the well-known LQR
-control can be exploited. Mracek and Cloutier [19]
-studied the theory of SDRE control and illustrated the applications of SDRE for
-nonlinear control problems. Banks et al. [20] studied the SDRE method for nonlinear
-control and estimation problems. Various methods for the solution of the SDRE
-were also covered in the study. An extensive review of the SDRE control was
-presented by &#199;imen [21]. In the literature, there are various applications of
-the SDRE control in different areas such as vehicle dynamics, aerospace,
-robotics, etc. Kanarachos et al. [22] and Jansen et al. [23] used the SDRE
-control for the design of the braking controller of electric vehicles. Alirezai
-et al. [24] developed a vehicle dynamics controller using the SDRE control and
-then they validated the performance of the controller experimentally. There are
-also studies which uses the SDRE control method to design nonlinear controllers
-for robotics, motor, and aerospace control [25-27].</p>
-
-<p class="body">The present paper is organized in five
-sections. After the introduction, an active nonlinear HP suspension system is
-modeled, and incorporated into the quarter car model. Then, the linear model
-with SDM of the nonlinear quarter car model is obtained. In section three, the
-performance index is formed and the SDRE control method is applied to the
-nonlinear quarter car model to attenuate sprung mass acceleration, suspension
-deflection, and tire deflection. Weighing coefficients in the performance index
-are adjusted according to the aim of the control. In section four, the
-performances of the controllers are examined making use of the frequency
-response plots of the sprung mass acceleration, suspension deflection, and tire
-deflection and of the simulations with random road displacement input in the
-time domain. Conclusion is given in the last section.</p>
-
-<h4>2. Active Hydro-Pneumatic Suspension System Model</h4>
-
-<p class="body">The general layout of the quarter car
-model with active HP suspension system is shown in figure 1. In this study, the
-control input to the active suspension is assumed as the oil flow rate into the
-second chamber. The hydraulic circuit which produces this control input is not
-included in the scope of this study and therefore is not taken into account in
-the active control. A detailed analysis of the passive HP
-suspension system can be found in the thesis by Joo [28].</p>
-
-<p class="body">Equation of motion for the main piston
-is:</p>
-
-<div class="equation">
-<img src="001_files/image001.png" class="eqn">
-<div class="eqn-number">(1)</div>
-</div>
-
-<p class="body">where P<sub>1</sub> is the pressure in
-the first chamber, A<sub>p</sub> is the piston area, M is the sprung mass, g is
-the constant of gravitational acceleration, z<sub>p</sub> is the sprung mass
-displacement, and F<sub>f</sub> is the Coulomb friction between the piston seal
-and cylinder. Equation of motion for the floating piston is:</p>
-
-<div class="equation">
-<img src="001_files/image002.png" class="eqn">
-<div class="eqn-number">(2)</div>
-</div>
-
-<p class="body">where P<sub>3</sub> is the absolute gas
-pressure in the third chamber, P<sub>2</sub> is the oil pressure in the second
-chamber, P<sub>Atm</sub> is the atmospheric pressure, M<sub>fp</sub> is the
-floating piston mass, z<sub>fp</sub> is the floating piston displacement, and F<sub>fp</sub>
-is the Coulomb friction between the floating piston seal and the cylinder.
-Assuming incompressible oil, the continuity equation for first and second
-chambers is:</p>
+<h4>3. Methodology</h4>
+<p class="body">The proposed method provides an alternative approach from the
+related works reviewed. While there are a lot of state-of-the-art method that
+can be utilized this method is proposed as a solution to be implemented to a
+single board computer (SBC) as it is simple and computationally inexpensive in
+comparison to the other method. Figure 1 shows the proposed system block
+diagram. The system will be installed on a Remote Controlled (RC) car which
+serves as the prototype for an autonomous vehicle. The installed webcam will be
+streaming continuously and the video feed will be fed into SBC to process with
+the aid of OpenCV libraries.</p>
+<p class="body">Figure 2 shows the overall flowchart for the image processing. The
+image processing is performed fully with the aid of OpenCV built-in libraries.</p>
 
 <figure>
-<img src="001_files/image003.jpg" class="article-img">
+<img src="001_files/image001.png" class="article-img">
 
 <figcaption>
-Figure 1. Active HP suspension</figcaption>
+Figure 1.
+System Block Diagram.</figcaption>
 </figure>
+
+<figure>
+<img src="001_files/image2.png" class="article-img">
+
+<figcaption>
+Figure 2.
+Image Processing Flowchart.</figcaption>
+</figure>
+
+<p class="subhead">3. 1. Image Acquisition</p>
+<p class="body">The webcam chosen has CMOS type sensor with 2 mm focal length. The
+chosen webcam has flexible hinge so that the elevation angle could be adjusted.
+The image is acquired form the video streaming feed and fed directly into
+microprocessor.</p>
+
+<p class="subhead">3. 2. Image Segmentation</p>
+<p class="body">The initial RGB colour space input from the webcam was converted
+to HSV colour space. The camera would look for pixel with the same Hue (H),
+Saturation (S) and Value (V) range in order to detect the rear view of the lead
+vehicle. The region of interest (ROI) was converted to white whereas the rest was
+converted to black. The outer corner of the contour was for subsequent operation.
+Figure 3 shows the segmented image.</p>
+
+<figure>
+<img src="001_files/image003.png" class="article-img">
+
+<figcaption>
+Figure 3.
+Segmented image.</figcaption>
+</figure>
+
+<p class="subhead">3. 3. Image Filtering</p>
+<p class="body">In order to reduce noise, a median filter was used. The median
+filter in OpenCV library uses Eq. 1 and replaces value in a square (represented
+by matrix value) neighbourhood around the centre pixel with its corresponding
+median value. Figure 4 shows the result of applying median filter to the
+segmented image.</p>
 
 <div class="equation">
 <img src="001_files/image004.png" class="eqn">
-<div class="eqn-number">(3)</div>
+<div class="eqn-number">(1)</div>
 </div>
 
-<p class="body">where Q<sub>in</sub> is the oil flow rate
-which is the control input. The oil flow rate Q passing through the orifice can
-be found using the orifice equation assuming turbulent flow as</p>
+<p class="body">Since the processing was done in real time the lighting (though
+barely noticeable) changed frequently. Simple blurring by using average filter
+was not as effective since it was highly affected by noisy images. Large
+difference in pixel points could cause a noticeable movement in the average
+value. It might cause the region of the noise to expand. Median filtering
+however was able to ignore the outliers by selecting the middle points [10].</p>
 
-<div class="equation">
-<img src="001_files/image005.png" class="eqn">
-<div class="eqn-number">(4)</div>
-</div>
+<figure>
+<img src="001_files/image4.png" class="article-img">
 
-<p class="body">where A<sub>v</sub> is the orifice
-opening area, C<sub>D</sub> is the orifice loss factor, &#961; is the oil
-density, and z<sub>t</sub> is the unsprung mass displacement. From the
-continuity equation for the oil volume at the first chamber, oil flow rate
-through the orifice can also be expressed as</p>
+<figcaption>
+Figure 4.
+Segmented image after filter operation.</figcaption>
+</figure>
 
-<div class="equation">
-<img src="001_files/image006.png" class="eqn">
-<div class="eqn-number">(5)</div>
-</div>
+<p class="subhead">3. 4. Morphological Operation</p>
+<p class="body">This operation was performed to correct the imperfections caused by
+the segmented images. Closing was the result of dilating the image followed by
+erosion. Fig. 5 shows the subsequent closing morphological operation done on
+the image.</p>
 
-<p class="body">The absolute gas pressure in the third
-chamber can be found using the polytropic gas model as</p>
+<figure>
+<img src="001_files/image5.png" class="article-img">
 
-<div class="equation">
-<img src="001_files/image007.png" class="eqn">
-<div class="eqn-number">(6)</div>
-</div>
+<figcaption>
+Figure
+5. Segmented image after consequent morphological operation.</figcaption>
+</figure>
 
-<p class="body">where P<sub>30</sub> is the absolute gas
-pressure at static equilibrium, V<sub>30</sub> is the volume of gas in the
-third chamber at static equilibrium, and &#947; is the polytropic gas
-coefficient. Equation of motion for the unsprung mass can be written similarly.</p>
+<p class="subhead">3. 5. Feature Extraction</p>
+<p class="body">From the extracted contour information, bounding box can be
+traced. The visual representation is shown in Figure 6 to show characteristic
+of the bounding box whereas Figure 7 shows the final result. This function draws a rectangle box that bounds the contour. If
+there are several regions that have been segmented, the algorithm is designed
+to look out for the maximum width and height of the contour and draw out the
+bounding box. The formula used to
+determine the maximum bounding box is depicted in Eq. 2 – 3 where <img src="001_files/image007.png"> is the width of
+the detected contour(s) and <img src="001_files/image008.png"> is the height
+of the contour(s). Meanwhile, <img src="001_files/image009.png"> and <img src="001_files/image010.png"> is the starting point of the detected edge of the
+contour(s) whereas <img src="001_files/image011.png"> and <img src="001_files/image012.png"> is the end
+point of the detected edge of the contour(s) alongside the x-axis and y-axis.</p>
 
-<p class="body">The equations derived so far can be used to
-simulate the active HP suspension system. The next step is the formation of the
-state dependent linear model of the active HP suspension system. To simplify
-the equations, floating piston mass and frictions between the piston seal and
-the cylinder can be neglected. To be able to obtain a spring equation in the
-form of a linear spring, a fifth degree (or higher) polynomial model is fitted
-to relative gas force by the least-square method as:</p>
+<figure>
+<img src="001_files/image6.png" class="article-img">
 
-<div class="equation">
-<img src="001_files/image008.png" class="eqn">
-<div class="eqn-number">(7)</div>
-</div>
-
-<p class="body">where a's are the polynomial coefficient,
-z<sub>fpt</sub> is relative displacement of the floating piston as defined in
-Eq. (12), and f<sub>1</sub> is the state dependent gas stiffness defined as</p>
-
-<div class="equation">
-<img src="001_files/image009.png" class="eqn">
-<div class="eqn-number">(8)</div>
-</div>
-
-<p class="body">As can be seen from Eq. (7), the
-polytropic gas equation is written as a linear spring equation with varying
-stiffness coefficient. Similarly, oil damping force F<sub>oil</sub> can be
-written as:</p>
-
-<div class="equation">
-<img src="001_files/image010.png" class="eqn">
-<div class="eqn-number">(9)</div>
-</div>
-
-<p class="body">where f<sub>2</sub> is the state
-dependent oil damping coefficient defined as</p>
-
-<div class="equation">
-<img src="001_files/image011.png" class="eqn">
-<div class="eqn-number">(10)</div>
-</div>
-
-<p class="body">The oil damping force is written in the
-form of a linear viscous damping equation with state dependent damping
-coefficient. The orifice equation and the polytropic gas equation are converted
-into convenient representation to be used in SDRE control. As explained in reference [21], there are different ways of
-parameterization of the nonlinear equations in terms of state dependent
-coefficients and states for a system which has at least two states. This
-provides additional flexibility to formulate the SDRE control problems. State
-dependent parameterization of the polytropic gas equation and the orifice equation
-are performed by mimicking the linear spring equation and the linear viscous
-damping equation, respectively, among different possible parameterizations.
-Polytropic gas equation is expressed as the product of the relative
-displacement state and the state dependent spring coefficient. Similarly the
-orifice equation is expressed as the product of the relative velocity and the
-state dependent viscous damping coefficient.</p>
-
-<p class="body">The states are then defined as:</p>
-
-<div class="equation">
-<img src="001_files/image012.png" class="eqn">
-<div class="eqn-number">(11)</div>
-</div>
-
-<div class="equation">
-<img src="001_files/image013.png" class="eqn">
-<div class="eqn-number">(12)</div>
-</div>
+<figcaption>
+Figure
+6. Visual representation of bounding box.</figcaption>
+</figure>
 
 <div class="equation">
 <img src="001_files/image014.png" class="eqn">
-<div class="eqn-number">(13)</div>
+<div class="eqn-number">(2)</div>
 </div>
 
 <div class="equation">
 <img src="001_files/image015.png" class="eqn">
-<div class="eqn-number">(14)</div>
+<div class="eqn-number">(3)</div>
 </div>
 
-<div class="equation">
-<img src="001_files/image016.png" class="eqn">
-<div class="eqn-number">(15)</div>
-</div>
-
-<p class="body">where z<sub>0</sub> is the road
-displacement input. Then the state equations take the form:</p>
-
-<div class="equation">
-<img src="001_files/image017.png" class="eqn">
-<div class="eqn-number">(16)</div>
-</div>
+<p class="body">In this case, the
+resolution of the camera had been set, therefore the pixel limit for width and
+height depicted by <img src="001_files/image016.png"> and <img src="001_files/image017.png"> is shown in Eq.
+4.</p>
 
 <div class="equation">
 <img src="001_files/image018.png" class="eqn">
-<div class="eqn-number">(17)</div>
+<div class="eqn-number">(4)</div>
 </div>
 
-<div class="equation">
-<img src="001_files/image019.png" class="eqn">
-<div class="eqn-number">(18)</div>
-</div>
+<figure>
+<img src="001_files/image7.png" class="article-img">
+
+<figcaption>
+Figure
+7. Final result.</figcaption>
+</figure>
+
+<p class="subhead">3. 7. Sensor Integration</p>
+<p class="body">In order to gauge the distance between lead vehicle and follower
+vehicle sensor is used. The sensor used is ultrasonic sensor. This sensor will
+be integrated to the system.</p>
+<p class="body">Once the vehicle is detected, SBC will prompt sensor board to gauge the
+distance. A microcontroller is used to get values from ultrasonic sensor and
+convert it into readable entity to be relayed back to SBC serially. SBC will
+decide the action of the motor of the RC car through Case 1, 2 and
+3(represented in equation (5)).</p>
 
 <div class="equation">
 <img src="001_files/image020.png" class="eqn">
-<div class="eqn-number">(19)</div>
+<div class="eqn-number">(5)</div>
+</div>
+
+<p class="body">Figure 8 shows the flowchart for the decision making for motor control.
+If the distance is too far (case 1) the follower vehicle will accelerate. If
+the distance is too near (case 2) the follower vehicle will stop. If the
+distance is ideal (case 3) the follower vehicle will maintain its speed.</p>
+
+<p class="subhead">3. 8. Optimization using Design of Experiment (DOE)</p>
+<p class="body">In order to determine the factors that contribute to the accuracy of
+the vehicle detection, an experiment was performed. The experiment utilized 2<sup>3</sup> factorial experimental methods. This method is useful as it provides the
+smallest number of trial runs (in this
+case 2<sup>3</sup> = 8 trials) [11]. The factors that were tested are; camera
+elevation angles (the degree of the way camera is positioned), environment
+lighting conditions, and the distance between the lead vehicle and the
+following vehicle. For each factor there are 2 levels, arbitrarily indicated as
+low (-1) and high (1). Table 1 shows the selection factors and its respective
+levels. These levels were selected based on the initial pilot test that had
+been performed. These levels however, are not robust to other kind of webcam as
+the levels were tested exclusively based on the webcam’s specification. The
+trials were tested on a completely randomized order with a total of 3
+replicates. This was done to ensure that each trial has an equal chance of
+being affected by extraneous factors. Extraneous factor may affect the
+responses of the trials between replicates and within replicates.</p>
+
+<figure>
+<img src="001_files/image8.png" class="article-img">
+
+<figcaption>
+Figure 8. Motor Control Decision Making.</figcaption>
+</figure>
+
+<center>
+<p class="body">Table 1. Selection of Factors and Levels.</p>
+<div class="widetable">
+<table>
+<thead>
+ <tr>
+  <td>Factors</td>
+  <td colspan="2">Levels</td>
+ </tr>
+ <tr>
+  <td>-1</td>
+  <td>1</td>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+  <td>Factor A: Camera elevation angle</td>
+  <td>20°</td>
+  <td>10°</td>
+ </tr>
+ <tr>
+  <td>Factor B: Lighting</td>
+  <td>Dim</td>
+  <td>Bright</td>
+ </tr>
+ <tr>
+  <td>Factor C: Distance</td>
+  <td>0.5m</td>
+  <td>1.0m</td>
+ </tr>
+</tbody>
+</table>
+</div>
+</center>
+
+<p class="body">The design matrix for
+the 2<sup>3 </sup>factorial adapted from [11] is shown in Table 2.</p>
+
+<center>
+<p class="body">Table 2. Design Matrix.</p>
+<div class="widetable">
+<table>
+<thead>
+<tr>
+  <td>Trial</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+ </tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>-1</td>
+  <td>-1</td>
+  <td>-1</td>
+ </tr>
+ <tr>
+  <td>2</td>
+  <td>1</td>
+  <td>-1</td>
+  <td>-1</td>
+ </tr>
+ <tr>
+  <td>3</td>
+  <td>-1</td>
+  <td>1</td>
+  <td>-1</td>
+ </tr>
+ <tr>
+  <td>4</td>
+  <td>1</td>
+  <td>1</td>
+  <td>-1</td>
+ </tr>
+ <tr>
+  <td>5</td>
+  <td>-1</td>
+  <td>-1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>6</td>
+  <td>1</td>
+  <td>-1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>7</td>
+  <td>-1</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+ <tr>
+  <td>8</td>
+  <td>1</td>
+  <td>1</td>
+  <td>1</td>
+ </tr>
+</tbody>
+</table>
+</div>
+</center>
+
+<p class="body">The response selected
+for this experiment is the accuracy factor between the measured area and the
+determined area (from pilot test). From the accuracy factor, the error <img src="001_files/image022.png"> can be
+determined. The formulae are depicted in Eq. 5-7. The data is then tabulated
+and analyzed using Minitab, a statistical software tool.</p>
+
+<div class="equation">
+<img src="001_files/image023.png" class="eqn">
+<div class="eqn-number">(6)</div>
 </div>
 
 <div class="equation">
-<img src="001_files/image021.png" class="eqn">
-<div class="eqn-number">(20)</div>
-</div>
-
-<p class="body">where k<sub>t</sub> is the tire stiffness
-and M<sub>t</sub> is the unsprung mass. In state space form, these equations
-can be written as</p>
-
-<div class="equation">
-<img src="001_files/image022.png" class="eqn">
-<div class="eqn-number">(21)</div>
-</div>
-
-<p class="body">where x<sub>5x1</sub> state vector as
-defined in Eq. (11-15), A<sub>5x5</sub> is the state dependent system matrix, B<sub>5x1</sub>
-is control input matrix, u is the control input which is oil flow rate , D<sub>5x1</sub>
-is the disturbance input matrix, and w is the disturbance input which is the
-road velocity input.</p>
-
-<h4>3. Controller Design</h4>
-
-<p class="body">After the nonlinear model of the HP
-suspension system is converted into linear state space model with state dependent
-parameter values, a nonlinear controller can be designed by the SDRE control.
-SDRE control is an effective and systematic way of designing nonlinear
-controllers. It provides a computationally simple way of designing nonlinear
-controllers and can be used instead of formal nonlinear control methods which
-involve complicated algorithms and numerical difficulties
-[21]. In the SDRE control, the first step is to obtain a state space
-model in which the matrices are functions of states. By this way, a linear
-structure of the nonlinear model is obtained while the nonlinearities in the
-model are fully captured by the state dependent parameter values. Then the cost
-function to be minimized is formed using the SDM. Thus Algebraic Matrix Riccati
-equation is also state dependent and is solved online along the trajectory of
-the states, resulting in a state dependent control law. After the state dependent linear model of the
-HP suspension system is obtained, SDRE control can be implemented. In this
-study, all states in the system are assumed to be available. Some of these
-states can also be estimated using an observer or state estimator by the SDRE
-method in which the observer gain can be found along the state trajectories by
-solving the SDRE. The SDRE control procedure is summarized in [19] as:</p>
-
-
-<p class="body">An input affine nonlinear system</p>
-
-<div class="equation">
-<img src="001_files/image023.png" class="eqn"><br>
 <img src="001_files/image024.png" class="eqn">
-<div class="eqn-number">(22)</div>
+<div class="eqn-number">(7)</div>
 </div>
-
-<p class="body">can be expressed as </p>
 
 <div class="equation">
 <img src="001_files/image025.png" class="eqn">
-<div class="eqn-number">(23)</div>
+<div class="eqn-number">(8)</div>
 </div>
-
-<p class="body">by direct parameterization
-where</p>
-
-<div class="equation">
-<img src="001_files/image026.png" class="eqn">
-<div class="eqn-number">(24)</div>
-</div>
-
-<p class="body">The infinite horizon cost
-function</p>
-
-<div class="equation">
-<img src="001_files/image027.png" class="eqn">
-<div class="eqn-number">(25)</div>
-</div>
-
-<p class="body">can be minimized by solving
-the SDRE along the state trajectories as</p>
-
-<div class="equation">
-<img src="001_files/image028.png" class="eqn">
-<div class="eqn-number">(26)</div>
-</div>
-
-<p class="body">The control input can be
-formed as</p>
-
-<div class="equation">
-<img src="001_files/image029.png" class="eqn">
-<div class="eqn-number">(27)</div>
-</div>
-
-<p class="body">In the active suspension control for the
-quarter car model, there are three performance criteria to be satisfied:</p>
-
-<ol>
-<li> Minimum sprung mass vertical
-acceleration for ride comfort,</li>
-
-<li> Minimum suspension deflection
-for suspension packaging, and</li>
-
-<li> Minimum tire deflection for
-road holding.</li>
-</ol>
-
-<p class="body">While satisfying these
-performances, the control input should be bounded. Therefore, the cost function
-to be minimized is expressed as</p>
-
-
-<div class="equation">
-<img src="001_files/image030.png" class="eqn">
-<div class="eqn-number">(28)</div>
-</div>
-
-<p class="body">where q<sub>1</sub>, q<sub>2</sub>,
-q<sub>3</sub>, and R are the weighting coefficients for the states and for the
-control input. The schematic of the controller design for the active HP
-suspension system is given in figure 2.</p>
-
-<figure>
-<img src="001_files/image031.jpg" class="article-img">
-
-<figcaption>
-Figure 2. Controller design with SDRE control for active
-suspension</figcaption>
-</figure>
-
-<p class="body">In the HP suspension system, gas dynamics
-is modelled using polytropic gas equation. To be able to express the gas
-dynamics in linear structure with state dependent gas stiffness, polytropic gas
-equation is rewritten in polynomial form as formulated in Eq. (7). Therefore,
-nonlinear gas force is expressed as a linear stiffness equation with state
-dependent spring stiffness. At each step, the gas spring stiffness is updated
-with the relative displacement across the gas volume (second system state).
-Similarly, the orifice equation is rewritten as a linear viscous equation with
-state dependent damping coefficient as formulated in Eq. (9). Viscous damping
-coefficient is updated with the relative velocity of sprung mass with respect
-to the tire (first state-fourth state) at each time step. As figure 2
-illustrates, updated gas spring stiffness and orifice damping coefficients are
-used to update the state space model with the SDM. By using this model and
-states, SDRE is solved at each time step with changing states. The solution of
-the SDRE is used to obtain the oil flow rate to the active suspension which is
-the control input. In the literature, different techniques are proposed for the
-solution of the SDRE [20]. For low order
-systems, SDRE can be solved algebraically or by symbolic manipulators. For
-higher order systems, interpolation methods can be used. </p>
-
-
 
 <h4>4. Results and Discussion</h4>
+<p class="subhead">4. 1. Vehicle Detection</p>
+<p class="body">Initial test results under normal and bright lighting show a lot
+of false positives. It is observed that the algorithm could not segment the
+desirable colors because the selected pre-set values of HSV could not
+discriminate the desirable color range due to the increase in brightness. The
+problem lies within the minimum and maximum range of V as it is dependent on
+the lightness and darkness of image produced. Once the appropriate V values
+range are set the system is tested for optimization.</p>
 
-<p class="body">After the controller is designed, the
-performance of the controller is examined both in frequency domain and in time
-domain. In the frequency domain, the model is simulated by sine inputs with
-varying frequencies and amplitudes and the approximate frequency response
-functions (FRF) are obtained for the corresponding road input. At each
-frequency, sprung mass acceleration, suspension deflection, and the tire
-deflection FRFs are calculated as the ratio of the root mean square (rms) of
-the responses to the rms of the road velocity input. In the time domain, active
-suspension is simulated with random road displacement inputs and the rms of the
-responses are examined to evaluate the controller performance. </p>
-
-<p class="body">HP suspension system is a nonlinear
-system and thus it does not have a unique FRF. However, trials have shown that
-the active controller can improve the performance variables for different input
-amplitudes. Here, the primary aim of the active controller is the ride comfort
-and thus the controller is designed by adjusting the weighting coefficients
-accordingly in the cost function. The system parameters used in the simulations
-as well as weighting factors and the input parameters used in simulations are
-given in table 1. The FRFs obtained from simulations are given in figures 3-5.</p>
+<p class="subhead">4. 2. Sensor Integration</p>
+<p class="body">Once integrated with the system, it is run for 30 trials to get
+the processing time each for 1 cycle of operation (vehicle detection to
+decision making) [11]. Table 3
+shows the descriptive statistics of the processing time.</p>
 
 <center>
+<p class="body">Table 3. Descriptive Statistics.</p>
 <div class="widetable">
-  <p class="body">Table 1. System, weighting, and input parameters</p>
 <table>
 <thead>
- <tr align="center">
-  <td style="padding:5px; border:1px solid black" colspan="3"><b>System Parameters</b></td>
-  <td style="padding:5px; border:1px solid black"><b>Weighting Factors</b></td>
-  <td style="padding:5px; border:1px solid black"><b>Input</b></td>
+ <tr>
+  <td>Variable</td>
+  <td>Mean</td>
+  <td>Minimum</td>
+  <td>Maximum</td>
  </tr>
 </thead>
 <tbody>
- <tr>
-  <td style="padding:5px; border:1px solid black">M=1500 kg</td>
-  <td style="padding:5px; border:1px solid black">V<sub>30</sub>=0.0019 m<sup>3</sup></td>
-  <td style="padding:5px; border:1px solid black">F<sub>f</sub>=40 N</td>
-  <td style="padding:5px; border:1px solid black">q<sub>1</sub>=1</td>
-  <td style="padding:5px; border:1px solid black" rowspan="2">Amplitude 0.1-0.01m</td>
- </tr>
- <tr>
-  <td style="padding:5px; border:1px solid black">A<sub>v</sub>=2e-4m<sup>2</sup></td>
-  <td style="padding:5px; border:1px solid black">&#947;=1.4</td>
-  <td style="padding:5px; border:1px solid black">F<sub>fp</sub>=20 N</td>
-  <td style="padding:5px; border:1px solid black">q<sub>2</sub>=100</td>
- </tr>
- <tr>
-  <td style="padding:5px; border:1px solid black">C<sub>D</sub>=0.8</td>
-  <td style="padding:5px; border:1px solid black">M<sub>t</sub>=153 kg</td>
-  <td style="padding:5px; border:1px solid black">M<sub>fp</sub>=1 kg</td>
-  <td style="padding:5px; border:1px solid black">q<sub>3</sub>=1</td>
-  <td style="padding:5px; border:1px solid black" rowspan="2">Frequency 0.4-20 Hz</td>
- </tr>
- <tr>
-  <td style="padding:5px; border:1px solid black">A<sub>p</sub>=0.007 m<sup>2</sup></td>
-  <td style="padding:5px; border:1px solid black">k<sub>t</sub>=6e5 N/m</td>
-  <td style="padding:5px; border:1px solid black">&#961;=800 kg/m<sup>3</sup></td>
-  <td style="padding:5px; border:1px solid black">R=1e5</td>
+<tr>
+  <td>Time(s)</td>
+  <td>0.26025</td>
+  <td>0.21077</td>
+  <td>0.33039</td>
  </tr>
 </tbody>
 </table>
 </div>
 </center>
 
-<p class="body">Figure 3 shows that the active suspension
-attenuates the sprung mass acceleration around the body bounce frequency
-considerably. Above 4 Hz, active and the passive suspension performances are
-somewhat similar and active suspension cannot improve the sprung mass
-acceleration in the higher frequency range. Thus, the active suspension is
-effective in improving the ride comfort in the lower range of frequencies.</p>
+<p class="body">The mean processing time is observed to be 0.26s, with the
+corresponding minimum and maximum time of 0.21s and 0.33s respectively. This is
+considered satisfactory considering that the system is run under
+resources-limited platform.</p>
 
-<p class="body">As figure 4 illustrates, the active
-suspension decreases the suspension deflection around the body bounce
-frequency. At very low frequencies the active suspension has increased
-suspension deflection with respect to the passive suspension. Again, after
-about 4 Hz, performances of the active and the passive suspensions are nearly
-the same. It is concluded that the active suspension can reduce the suspension
-deflection in the most critical part of the frequency range of interest.</p>
-
-<p class="body">The result for the tire deflection is
-very similar to the result for the sprung mass acceleration. As seen in figure
-5, at low frequencies particularly around the body bounce frequency, the active
-suspension is effective in significantly reducing the tire deflection. This
-behaviour provides better road holding for the vehicle. Between 3 Hz, and the
-wheel hop frequency, however, the performance of the active suspension
-deteriorates and the passive suspension is observed to perform somewhat better.
-</p>
-
-<figure>
-<img src="001_files/image032.png" class="article-img">
-
-<figcaption>
-Figure 3. Sprung mass acceleration FRF for passive and active HP suspension</figcaption>
-</figure>
-
-
-<figure>
-<img src="001_files/image033.png" class="article-img">
-
-<figcaption>
-Figure 4. Suspension deflection FRF for passive and active HP suspension</figcaption>
-</figure>
-
-
-<figure>
-<img src="001_files/image034.png" class="article-img">
-
-<figcaption>
-Figure 5. Tire deflection FRF for passive and active HP suspension</figcaption>
-</figure>
-
-
-<p class="body">In summary, the active HP suspension
-improves the ride comfort, road holding, and the tire deflection in the
-significant range of frequency around the body bounce frequency. At higher
-frequencies, around and above the wheel hop frequency, the active and the
-passive suspension performances are similar to each other. Only at very low
-frequencies, active suspension seems to degrade the suspension packaging
-performance which is relatively insignificant.</p>
-
-<p class="body">The performance of the active
-controller can also be evaluated using random road profile inputs. This would
-also give an indication of the feasibility of the active suspension
-implementation by checking the oil flow rate required during operation on
-realistic road surfaces. The
-random road profile input used in the simulation is representative of a course
-asphalt-concrete road as shown in figure 6. It includes 0.1-20 Hz frequency content
-at 50 kph. rms values for the sprung mass acceleration, suspension deflection,
-tire deflection, and the oil flow rate are calculated and given in table 2. Simulation results are presented
-in figures 7-10.</p>
-
-<figure>
-<img src="001_files/image035.png" class="article-img">
-
-<figcaption>
-Figure 6. Random road displacement input</figcaption>
-</figure>
-
-
-<figure>
-<img src="001_files/image036.png" class="article-img">
-
-<figcaption>
-Figure 7. Sprung mass acceleration for passive and active HP suspension</figcaption>
-</figure>
-
-
-<figure>
-<img src="001_files/image037.png" class="article-img">
-
-<figcaption>
-Figure 8. Suspension deflection for passive and active HP suspension</figcaption>
-</figure>
-
-
-<figure>
-<img src="001_files/image038.png" class="article-img">
-
-<figcaption>
-Figure 9. Tire deflection for passive and active HP suspension</figcaption>
-</figure>
-
-<figure>
-<img src="001_files/image039.png" class="article-img">
-
-<figcaption>
-Figure 10. Oil flow rate for active HP suspension</figcaption>
-</figure>
+<p class="subhead">4. 3. DOE Optimization Result</p>
+<p class="body">The estimated effects and Coefficients for error table generated from
+Minitab is shown in Table 3 (some values were omitted as the value of interest
+is just the p-value). Error in this case is the error for the system to detect
+the lead vehicle accurately. <img src="001_files/image026.png"> is
+the probability that quantifies the strength of the evidence against the null
+hypothesis in favor of the alternate hypothesis. Table 5 shows the <img src="001_files/image026.png"> and
+its respective description.</p>
 
 <center>
+<p class="body">Table 4. Estimated Effects and
+Coefficients for Error.</p>
 <div class="widetable">
-  <p class="body">Table 2. Rms values of responses for active and passive suspensions</p>
 <table>
 <thead>
- <tr align="center">
-  <td style="padding:5px; border:1px solid black"></td>
-  <td style="padding:5px; border:1px solid black"><b>Active</b></td>
-  <td style="padding:5px; border:1px solid black"><b>Passive</b></td>
+<tr>
+  <td>Term</td>
+  <td>P</td>
  </tr>
 </thead>
 <tbody>
- <tr>
-  <td style="padding:5px; border:1px solid black"><b>Vertical Acceleration [m/s<sup>2</sup>]</b></td>
-  <td style="padding:5px; border:1px solid black">0.10</td>
-  <td style="padding:5px; border:1px solid black">0.56</td>
+<tr>
+  <td>Constant</td>
+  <td>0.000</td>
  </tr>
  <tr>
-  <td style="padding:5px; border:1px solid black"><b>Suspension Deflection[mm]</b></td>
-  <td style="padding:5px; border:1px solid black">5.92</td>
-  <td style="padding:5px; border:1px solid black">10.68</td>
+  <td>A:
+  Camera Angle</td>
+  <td>0.000</td>
  </tr>
  <tr>
-  <td style="padding:5px; border:1px solid black"><b>Tire Deflection [mm]</b></td>
-  <td style="padding:5px; border:1px solid black">0.84</td>
-  <td style="padding:5px; border:1px solid black">1.65</td>
+  <td>B:
+  Illumination</td>
+  <td>0.777</td>
  </tr>
  <tr>
-  <td style="padding:5px; border:1px solid black"><b>Flow Rate [Liter/min]</b></td>
-  <td style="padding:5px; border:1px solid black">12.40</td>
-  <td style="padding:5px; border:1px solid black"></td>
+  <td>C:
+  Distance</td>
+  <td>0.001</td>
+ </tr>
+ <tr>
+  <td>A:
+  Camera Angle*B: Illumination</td>
+  <td>0.265</td>
+ </tr>
+ <tr>
+  <td>A:
+  Camera Angle*C: Distance</td>
+  <td>0.001</td>
+ </tr>
+ <tr>
+  <td>B:
+  Illumination*C: Distance</td>
+  <td>0.067</td>
+ </tr>
+ <tr>
+  <td>A:
+  Camera Angle*B: Illumination* C:
+  Distance</td>
+  <td>0.002</td>
  </tr>
 </tbody>
 </table>
 </div>
 </center>
 
-<p class="body">Simulation results show that the
-implementation of the active suspension reduces the sprung mass acceleration,
-suspension deflection, and the tire deflections simultaneously for the random
-road profile input. Particularly, for sprung mass acceleration, the active
-suspension reduces the rms value of the sprung mass acceleration considerably.
-Therefore, SDRE control can be applied to active HP suspension system to
-improve the ride performance, together with an improvement in road holding,
-successfully. Further, the rms value of the flow rate for the given road
-profile as seen in table 2 is regarded as sufficiently low for practical
-implementation. </p>
+<p class="body">From Table 4, it is
+observed that Factor A, Factor C, Factor AC and Factor ABC have the least
+p-value. Based on Table 5, it can be deduced that these factors have strong
+evidence against the null hypothesis in favor of the alternate hypothesis. In
+other words, these factors have highly significant effect to the contribution
+of the error. Factor BC on the other hand, has weak evidence against the null
+hypothesis in favor of alternate hypothesis, which means that the factor has
+low effect to the contribution of error. Finally Factor B and Factor AB shows
+no evidence against the null hypothesis in favor of the alternate hypothesis,
+which means that they did not contribute to the error.</p>
+<p class="body">In order to analyze
+the best combination of factors with the least error, a cube plot is generated
+as shown in Figure 8. From the cube plot it is observed that the error <img src="001_files/image027.png"> obtained is at
+a satisfactory level. In exception of the (camera angle at 10°, bright
+illumination and 0.5m distance) , (camera angle at 10° , bright illumination
+and 1.0 m distance) and (camera angle at 10°, dim illumination and 1.0m
+distance ) with error <img src="001_files/image027.png"> of 0.3,0.5 and 0.9 respectively the rest is
+minimal. Therefore it can also be said that the best camera (elevation) angle
+is at 20° regardless of the illumination and distance level <i
+style='mso-bidi-font-style:normal'>(based from the tested condition)</i>.</p>
 
-<h4>5. Conclusion</h4>
+<center>
+<p class="body">Table 5. Description
+for the respective <img src="001_files/image028.png"> [11].</p>
+<div class="widetable">
+<table>
+<thead>
+<tr>
+  <td>p-values</td>
+  <td>Description</td>
+ </tr>
+</thead>
+<tbody>
+<tr>
+  <td>p&gt;0.10</td>
+  <td>No
+  evidence against the null hypothesis in favour of the alternate hypothesis</td>
+ </tr>
+ <tr>
+  <td>0.05&lt;p&lt;0.10</td>
+  <td>Weak
+  evidence against the null hypothesis in favour of alternate hypothesis</td>
+ </tr>
+ <tr>
+  <td>0.01&lt;p&lt;0.05</td>
+  <td>Moderate
+  evidence against the null hypothesis in favour of alternate hypothesis</td>
+ </tr>
+ <tr>
+  <td>p&lt;0.01</td>
+  <td>Strong
+  evidence against the null hypothesis in favour of alternate hypothesis</td>
+ </tr>
+</tbody>
+</table>
+</div>
+</center>
 
-<p class="body">In
-this study, a systematic method of designing an active controller for a vehicle
-equipped with a nonlinear HP suspension system is developed. The controller
-simultaneously attenuates the sprung mass acceleration, suspension deflection,
-and tire deflection arising from road disturbances to improve ride comfort and
-road holding simultaneously. Since the HP suspension system is inherently
-nonlinear due to characteristics of the gas volume and the orifice equation, a
-nonlinear controller is designed for the active suspension. </p>
+<figure>
+<img src="001_files/image9.png" class="article-img">
 
-<p class="body">In
-the design of the nonlinear controller, the SDRE control method is used and all
-nonlinearities of the model are kept in the derivation of the controller. As a
-first step, a quarter car model of the vehicle with a nonlinear active HP
-suspension system is modelled and the state dependent linear structured model
-of the system is derived. Polytropic gas equation is rewritten as a polynomial
-equation and the gas force is expressed as a linear stiffness equation with a
-state dependent stiffness coefficient. Similarly, orifice equation is rewritten
-in terms of state dependent viscous damping coefficient. Simulation results
-show that sprung mass acceleration, suspension deflection, and tire deflection
-can be substantially attenuated at frequencies around the body bounce frequency
-of the vehicle with improved ride and handling. Performance of the active
-suspension is also validated by using a random road displacement input. It is
-shown that on random roads, the sprung mass acceleration can be reduced with
-the active suspension with reasonably low control effort. Therefore, the
-results from the study show the feasibility of the proposed active suspension
-control for implementation to a vehicle with HP suspension system. </p>
+<figcaption>
+Figure 9. Cube Plot Data Means for <img src="001_files/image030.png">.</figcaption>
+</figure>
 
-<p class="body">In this study all states are assumed as
-available for the state feedback. However, using the SDRE approach, a nonlinear
-estimator can also be designed to estimate the unknown system states. Moreover,
-in this study the SDRE is solved at every time step numerically. Instead, other
-approaches proposed in the literature may be tried in the solution of the SDRE
-to increase computational speed [20].</p>
+<h4>5. Conclusions</h4>
+<p class="body">Based on the result of the 2<sup>3</sup> factorial experiments the
+significant factors could be determined. It was concluded that the errors were
+minimal. The experiment also showed that the system is robust towards different
+illumination levels. However, there are also several limitations that need to
+be addressed for future improvement. One of them is the possible illumination
+glare due to very bright sunlight condition that may interfere with image
+segmentation, and another is when the distance exceeds the tested values as the
+system (and OpenCV libraries) may not have sufficient minimum data to detect
+the contour area which may result in the failure of the system to detect the
+lead vehicle totally.</p>
+
+<h4>Acknowledgement</h4>
+<p class="body">The authors
+express their sincere thanks to the reviewers for their significant
+contributions to the improvement of the final paper. This research was
+supported by Development of Sustainable Platform for Land, Air and Naval
+(SPALAN) System Grant. (Grant number: 1001/PELECT/814170).</p>
 
 <h4 id="references">References</h4>
 <div class="ref">
-<p class="body">[1] Karnopp D.,
-Heess G. "Electronically Controllable Vehicle Suspension", Vehicle System
-Dynamics, v.20, pp. 207-217,1991. <a href="http://dx.doi.org/10.1080/00423119108968986" target="_blank">View Article</a></p>
+<p class="body">[1] N.
+Abdul Rahman, &quot;Road Safety Situation In Malaysia,&quot; 2013. [Online].
+Available:
+http://www.unece.org/fileadmin/DAM/trans/doc/2013/wp1/newdelhi/Malaysia.pdf.
+[Accessed 22 September 2014]. <a href="http://www.unece.org/fileadmin/DAM/trans/doc/2013/wp1/newdelhi/Malaysia.pdf." target="_blank">View Article</a></p>
 
-<p class="body">[2] Butsuen, T.
-"The Design of Semi-active Suspensions for Automotive Vehicles", PhD Thesis,
-Massachusetts Institute of Technology, 1989. <a href="http://hdl.handle.net/1721.1/14220" target="_blank">View Article</a></p>
+<p class="body">[2] A.
+Shacklock, X. Jian and W. Han, &quot;Visual Guidance for Autonomous Vehicles:
+Capability and Challenges,&quot; in <i style='mso-bidi-font-style:normal'>Autonomous
+Mobile Robots: Sensing, Control, Decision Making and Applications</i>, Florida,
+CRC Press, 2006, pp. 6-40. <a href="https://www.crcpress.com/Autonomous-Mobile-Robots-Sensing-Control-Decision-Making-and-Applications/Ge/9780849337482" target="_blank">View Book</a></p>
 
-<p class="body">[3] Elmadany M.
-M. "Optimal Linear Active Suspensions with Multivariable Integral Control",
-Vehicle System Dynamics, v.19, pp. 313-329, 1990. <a href="http://dx.doi.org/10.1080/00423119008968950" target="_blank">View Article</a></p>
+<p class="body">[3] R.
+L. Klaser, F. S. Osorio and D. F. Wolf, &quot;Simulation of an Autonomous
+Vehicle with a Vision-Based Navigation System in Unstructured Terrains Using
+OctoMap,&quot; in <i style='mso-bidi-font-style:normal'>2013 III Brazilian
+Symposium on Computing Systems Engineering (SBESC)</i>, Niterói, 2013. <a href="http://dx.doi.org/10.1109/SBESC.2013.46" target="_blank">View Article</a></p>
 
-<p class="body">[4] Alleyne A.,
-Neuhaus P. D., Hedrick J. K. "Application of Nonlinear Control Theory to
-Electronically Controlled Suspensions", Vehicle System Dynamics, v.22, pp.
-309-320,1993. <a href="http://dx.doi.org/10.1080/00423119308969033" target="_blank">View Article</a></p>
+<p class="body">[4] M.
+Huang, R. Zhang, Y. Ma and Q. Yan, &quot;Research on Autonomous Driving Control
+Method of Intelligent Vehicle Based on Vision Navigation,&quot; in <i
+style='mso-bidi-font-style:normal'>2010 International Conference on
+Computational Intelligence and Software Engineering</i>, Wuhan, 2010. <a href="http://dx.doi.org/10.1109/CISE.2010.5676770" target="_blank">View Article</a></p>
 
-<p class="body">[5] Pielbeam C.,
-Sharp R. S. "Performance Potential and Power Consumption of Slow-Active Suspension
-with Preview", Vehicle System Dynamics, v.25, pp. 169-183, 1996. <a href="http://dx.doi.org/10.1080/00423119608968963" target="_blank">View Article</a></p>
+<p class="body">[5] K.
+Sharma, K. Jeong and S. Kim, &quot;Vision based autonomous vehicle navigation
+with self-organizing map feature matching technique,&quot; in <i
+style='mso-bidi-font-style:normal'>11th International Conference on Control,
+Automation and Systems (ICCAS)</i>, Gyeonggi-do, 2011. <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6106358&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6106358" target="_blank">View Article</a></p>
 
-<p class="body">[6] Thompson A.
-G., Chaplin P. M. "Force Control in Electrohydraulic Active Suspensions",
-Vehicle System Dynamics, v.25, pp. 185-202, 1996.</p>
+<p class="body">[6] Z.
+Khalid, E.-A. Mohamed and M. Abdenbi, &quot;Stereo vision-based road obstacles
+detection,&quot; in <i style='mso-bidi-font-style:normal'>8th International
+Conference on Intelligent Systems: Theories and Applications (SITA)</i>, Rabat,
+2013. <a href="http://dx.doi.org/10.1109/SITA.2013.6560817" target="_blank">View Article</a></p>
 
-<p class="body">[7] Sharp R.S.,
-Peng H. "Vehicle Dynamics Applications of Optimal Control Theory", Vehicle
-System Dynamics, International Journal of Vehicle Mechanics and Mobility, v.49,
-No.7, pp. 1073-1111, 2011. <a href="http://dx.doi.org/10.1080/00423114.2011.586707" target="_blank">View Article</a></p>
+<p class="body">[7] R.
+Gonzalez and R. Woods, Digital Image Processing, 3rd ed., Prentice Hall, 2007. <a href="http://www.academia.edu/7310640/Digital_Image_Processing_3rd_ed._-_R._Gonzalez_R._Woods" target="_blank">View Book</a></p>
 
-<p class="body">[8] Li H., Jing
-X., Karimi H. R. "Output-Feedback-Based H<sub>&#8734;</sub> Control for Vehicle
-Suspensions With Control Delay", IEEE Transactions on Industrial Electronics,
-v. 61, No. 1, pp. 436-446, 2014. <a href="http://dx.doi.org/10.1109/TIE.2013.2242418" target="_blank">View Article</a></p>
+<p class="body">[8] A.
+Mordvintsev and A. K. Rahman, &quot;OpenCV-Python Tutorials
+Documentation,&quot; 3 February 2014. [Online]. Available:
+http://www.scribd.com/doc/218973725/Opencv-Python-Tutroals#scribd. <a href="http://www.scribd.com/doc/218973725/Opencv-Python-Tutroals#scribd" target="_blank">View Article</a></p>
 
-<p class="body">[9] Du H., Zhang
-N., Wang L. "Switched Control of Vehicle Suspension Based on Motion-Mode
-Detection", Vehicle System Dynamics, International Journal of Vehicle Mechanics
-and Mobility, v.52, No.1, pp. 142-165, 2014. <a href="http://dx.doi.org/10.1080/00423114.2013.866258" target="_blank">View Article</a></p>
+<p class="body">[9] itseez,
+&quot;About OpenCV,&quot; 2015. [Online]. Available:
+http://opencv.org/about.html. [Accessed 18 October 2014]. <a href="http://opencv.org/about.html" target="_blank">View Article</a></p>
 
-<p class="body">[10] Montazeri-Gh
-M., Kavianipour O. "Investigation of the Active Electromagnetic Suspension
-System Considering Hybrid Control Strategy", Proceedings of the Institution of
-Mechanical Engineers, Part C: Journal of Mechanical Engineering Science, v.
-228, No.10, pp. 1658-1669, 2014. <a href="http://dx.doi.org/10.1177/0954406213511430" target="_blank">View Article</a></p>
+<p class="body">[10] G.
+Bradski and A. Kaehler, Learning OpenCV, 1st ed., O'Reilly, 2008. <a href="http://shop.oreilly.com/product/9780596516130.do" target="_blank">View Book</a></p>
 
-<p class="body">[11] LiQiang J.,
-Yue L. "Study on Self-tuning Control Strategy of Suspension Systems for
-Improving Vehicle Ride Performance", International Journal of Control and
-Automation, v.7, No. 6, pp. 129-142, 2014. <a href="http://www.sersc.org/journals/IJCA/vol7_no6/13.pdf" target="_blank">View Article</a></p>
-
-<p class="body">[12] Bauer W. "Hydropneumatic
-Suspension Systems", Springer, Heidelberg, 2011. <a href="http://books.google.ca/books?id=YVB80K3KnLIC&printsec=frontcover&dq=Hydropneumatic+Suspension+Systems&hl=en&sa=X&ei=9Bg4VMuaGYG1sQTWt4KQDw&redir_esc=y#v=onepage&q&f=false" target="_blank">View Book</a></p>
-
-<p class="body">[13] El-Demerdash
-S. M., Crolla D. A. "Hydro-pneumatic Slow-active Suspension with Preview
-Control", Vehicle System Dynamics, v.25, pp. 369-386, 1996. <a href="http://dx.doi.org/10.1080/00423119608968972" target="_blank">View Article</a></p>
-
-<p class="body">[14] Gao B.,
-Darling J., Tilley D.G., Williams R. A., Bean A., Donahue J. "Control of a
-Hydropneumatic Active Suspension Based on a Non-Linear Quarter-Car Model",
-Proc. IMechE, v.220, pp. 15-31, Part I: J. Systems and Control Engineering,
-2005. <a href="http://dx.doi.org/10.1243/095965105X77501" target="_blank">View Article</a></p>
-
-<p class="body">[15] Shi J-W.,
-Li X-W., Zhang J-W. "Feedback Linearization and Sliding Mode Control for Active
-Hydropneumatic Suspension of a Special-Purpose Vehicle", Proc. IMechE, v.224,
-pp. 41-53, Part D: J. Automobile Engineering, 2009. <a href="http://dx.doi.org/10.1243/09544070JAUTO1111" target="_blank">View Article</a></p>
-
-<p class="body">[16] Rosam N.,
-Darling J. "Development and Simulation of a Novel Roll Control System for the
-Interconnected Hydragas&#174;
-Suspension", Vehicle System Dynamics: International Journal of Vehicle
-Mechanics and Mobility, v.27, No.1, pp. 1-18, 1997. <a href="http://dx.doi.org/10.1080/00423119708969320" target="_blank">View Article</a></p>
-
-<p class="body">[17] Schumann A. R., Anderson R. J.
-"Optimal Control of an Active Anti Roll Suspension for an Off-Road Utility
-Vehicle Using Interconnected Hydragas Suspension Units", Vehicle System
-Dynamics Supplement 37, pp 145-156, 2002. <a href="http://books.google.ca/books?hl=en&lr=&id=CARW4G4IS_EC&oi=fnd&pg=PA145&dq=Optimal+Control+of+an+Active+Anti+Roll+Suspension+for+an+Off-Road+Utility+Vehicle+Using+Interconnected+Hydragas+Suspension+Units&ots=j8jmUF3pnU&sig=omodvqkIXmL57yq9_lFDBNEiOiM#v=onepage&q&f=false" target="_blank">View Article</a></p>
-
-<p class="body">[18] Friedland
-B. "Advanced Control System Design", Prentice Hall, Englewood Cliffs, N.J.,
-1996. <a href="http://books.google.ca/books?id=dUVvQgAACAAJ&dq=Advanced+Control+System+Design&hl=en&sa=X&ei=YBk4VK7KBOzgsASBrYCQCQ&redir_esc=y" target="_blank">View Book</a></p>
-
-<p class="body">[19] Mracek C.
-P., Cloutier J. R. "Control Designs for the Nonlinear Benchmark Problem via the
-State-Dependent Riccati Equation Method", International Journal of Robust and
-Nonlinear Control, v.8, pp. 401-433, 1998. <a href="http://dx.doi.org/10.1002/(SICI)1099-1239(19980415/30)8:4/5<401::AID-RNC361>3.0.CO;2-U" target="_blank">View Article</a></p>
-
-<p class="body">[20] Bank H. T.,
-Lewis B. M., Tran H. T. "Nonlinear Feedback Controllers and Compensators- A
-State Dependent Riccati Equation Approach", Comput. Optim. Appl., v.37, pp.
-177-218, 2007. <a href="http://dx.doi.org/10.1007/s10589-007-9015-2" target="_blank">View Article</a></p>
-
-<p class="body">[21] &#199;imen T.
-"State-Dependent Riccati Equation Control- A Survey", Proceedings of the 17th
-World Congress, The International Federation of Automatic Control, Seoul,
-Korea, July 6-11, 2008. <a href="http://www.ifac-papersonline.net/Detailed/36352.html" target="_blank">View Article</a></p>
-
-<p class="body">[22] Kanarachos S., Alirezaei
-M., Jansen S., Maurice J-P. "Control Allocation for Regenerative Braking of
-Electric Vehicles with an Electric Motor at the Front Axle Using the
-State-Dependent Riccati Equation Control Technique", Proceedings of the
-Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering,
-v.228, No.2, pp. 129-143, 2014. <a href="http://dx.doi.org/10.1177/0954407013498227" target="_blank">View Article</a></p>
-
-<p class="body">[23] Jansen S.,
-Alirezaei M., Kanarachos S. "Adaptive Regenerative Braking for Electric
-Vehicles with an Electric Motor at the Front Axle Using the State Dependent
-Riccati Equation Control Technique", Wseas Transactions on Systems and Control,
-v.9, pp. 434-447, 2014. <a href="http://www.wseas.org/multimedia/journals/control/2014/a485703-208.pdf" target="_blank">View Article</a></p>
-
-<p class="body">[24] Alirezai
-M., Kanarachos B., Scheepers B., Maurice J. P. "Experimental Evaluation of Optimal
-Vehicle Dynamic Control Based on the State Dependent Riccati Equation
-Technique", American Control Conference (ACC) Washington, DC, USA, 2013. <a href="http://dx.doi.org/10.1109/ACC.2013.6579871" target="_blank">View Article</a></p>
-
-<p class="body">[25] Do T. D.,
-Kwak S., Choi H. H., Jung J. W. "Suboptimal Control Scheme Design for Interior
-Permanent-Magnet Synchronous Motors: An SDRE-Based Approach", IEEE Transaction
-on Power Electronics, v.29, No 6, pp. 3020-3031, 2014. <a href="http://dx.doi.org/10.1109/TPEL.2013.2272582" target="_blank">View Article</a></p>
-
-<p class="body">[26] Massari M.,
-Zamaro M. "Application of SDRE Technique to Orbital and Attitude Control of
-Spacecraft Formation Flying", Acta Astronautica, v.94, pp. 409-420, 2014. <a href="http://dx.doi.org/10.1016/j.actaastro.2013.02.001" target="_blank">View Article</a></p>
-
-<p class="body">[27] Korayem, M.
-H., Zehfroosh A., Tourajizadeh H., Manteghi S. "Optimal Motion Planning of
-Non-linear Dynamic Systems in the Presence of Obstacles and Moving Boundaries
-Using SDRE: Application on Cable-Suspended Robot", Nonlinear Dyn v. 76, pp.
-1423-1441, 2014. <a href="http://dx.doi.org/10.1007/s11071-013-1219-7" target="_blank">View Article</a></p>
-
-<p class="body">[28] Joo F. R. "Dynamic Analysis of
-a Hydropneumatic Suspension System", Concordia University, M.Sc. Thesis,
-Mechanical Engineering Department, 1991. <a href="http://spectrum.library.concordia.ca/3066/1/MM73616.pdf" target="_blank">View Article</a></p>
+<p class="body">[11] D.
+C. Montgomery, Design and Analysis of Experiments International Student
+Version, 8th ed., Singapore: John Wiley &amp; Sons, 2013. <a href="http://ca.wiley.com/WileyCDA/WileyTitle/productCd-1118097939.html" target="_blank">View Book</a></p>
 </div> <!--REF -->
   </div> <!--INDENT -->
 
